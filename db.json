@@ -1,0 +1,21 @@
+{
+  "services": [{ "id": 1, "title": "AC Installation", 
+    "thumbnailUrl": "http://127.0.0.1:9000/AC_installation.jpg", "rate": 4985,
+    "rating": 4,"services":["service 11","service 12","service 13"], "specialist": { "id": 1, "fullName": "Quick and best AC Installation team in Chennai" }},
+    { "id": 2, "title": "AC Service", 
+      "thumbnailUrl": "http://127.0.0.1:9000/AC_Service.jpg", "rate": 2500,
+      "rating": 3,"services":["service 21","service 22","service 23"], "specialist": { "id": 1, "fullName": "Chennai top Most AC Service Team" }},
+      { "id": 3, "title": "AC Repair", 
+        "thumbnailUrl": "http://127.0.0.1:9000/AC_Repair.jpg", "rate": 3295,
+        "rating": 5,"services":["service 31","service 32","service 33"], "specialist": { "id": 1, "fullName": "Reliable AC Repair specialist in Chennai" }},
+        { "id": 4, "title": "AC Gas Filling", 
+          "thumbnailUrl": "http://127.0.0.1:9000/AC_Gas_Filling.jpg", "rate": 4875,
+          "rating": 5,"services":["service 41","service 42","service 43"], "specialist": { "id": 1, "fullName":"Fastest Gas Filling Tean in Chennai at Low Cost and high quality gas filling" }},
+          { "id": 5, "title": "AC Relocation Service", 
+            "thumbnailUrl": "http://127.0.0.1:9000/AC_Relocation_Services.jpg", "rate":5925 ,
+            "rating": 4.9,"services":["service 51","service 52","service 53"], "specialist": { "id": 1, "fullName": "Damage free relocation services in your door step " }},
+            { "id": 6, "title": "AC Mechanics", 
+              "thumbnailUrl": "http://127.0.0.1:9000/AC_Mechanics.jpg", "rate": 6384,
+              "rating": 3.0,"services":["service 61","service 62","service 63"], "specialist": { "id": 1, "fullName": "you can hire best AC mechanucs in the city" }}
+  ]
+}

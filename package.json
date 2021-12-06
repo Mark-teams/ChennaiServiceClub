@@ -1,0 +1,82 @@
+{
+  "name": "Chennai-ServiceClub-react",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://Mark-teams.github.io/ChennaiServiceClub",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "0.1.9",
+    "@syncfusion/ej2-react-calendars": "^19.3.46",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@vonage/server-sdk": "^2.10.10",
+    "ajax": "0.0.4",
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^5.1.3",
+    "carousel": "0.0.3",
+    "disable-scroll": "^0.6.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "font-awesome": "^4.7.0",
+    "framer-motion": "^3.1.1",
+    "gh-pages": "^3.2.3",
+    "git": "^0.1.5",
+    "json-server": "^0.16.3",
+    "mdbreact": "^5.2.0",
+    "nexmo": "^2.9.1",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.6.4",
+    "react-dom": "^17.0.1",
+    "react-floating-action-button": "^1.0.5",
+    "react-icons": "^4.3.1",
+    "react-multi-carousel": "^2.6.5",
+    "react-native-action-button": "^2.8.5",
+    "react-owl-carousel": "^2.3.3",
+    "react-phone-number-input": "^3.1.35",
+    "react-player": "^2.9.0",
+    "react-responsive": "^8.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "react-transition-group": "^4.4.2",
+    "reactstrap": "^9.0.1",
+    "semantic-ui-react": "^2.0.4",
+    "socket.io": "^4.3.1",
+    "styled-components": "^5.3.3",
+    "swiper": "^6.8.4",
+    "twilio": "^3.70.0",
+    "web-vitals": "^0.2.4"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

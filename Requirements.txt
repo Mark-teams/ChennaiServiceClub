@@ -1,0 +1,21 @@
+service-> list of services-> service->booking
+|_ Name
+|_ Address
+|_ Phonenumber
+|_ location
+|_ pincode
+|_ service Time
+
+order placed->then send message to Customer and Service man==> done 06/11/2012
+
+06-11-2021
+functionality -OK--- try to do in whatsapp
+
+Add Bell ICON for Offers
+CSS add
+Auto focus
+Logo-Creation
+
+Add Content in to the sites
+
+

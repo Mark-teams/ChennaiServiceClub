@@ -1,0 +1,277 @@
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.Form{
+  height:100vh;
+  /* width:100%; */
+  /* display:flex; */
+  /* align-items:center; */
+  justify-content:center;
+  flex-direction: column; 
+  text-align: left;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@import url('https://cdn.syncfusion.com/ej2/material.css');
+.phone{
+  width:30%;
+  padding:6%;
+  
+}
+
+.input{
+  padding:10px;
+  width:90%;
+  max-width:90%;
+  font-size:1rem;
+  letter-spacing:1px;
+}
+.Submitbtn{
+  margin-top:1rem;
+ width:90%;
+ padding:2%;
+  background:rgb(23, 83, 99);
+  color:#fff;
+  text-transform:uppercase;
+  border:none;
+  align-items: center;
+  text-align: center;
+  max-width:90%; 
+  justify-content:center;
+  position: relative;
+    
+}
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* background: rgb(23, 83, 99); */
+  opacity: 0.6;
+  color:white;
+  padding: 5px 10px;
+border-radius: 4px;
+  background:linear-gradient(to right, #003644, #033b50);
+  
+}
+
+.input_cart{
+  border: 0px;
+  width:20px;
+  text-align: center;
+  padding: 6px ​6px 3px 3px;
+  background-color: #f4f8f7;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.btn_cart{
+  background: #38a785;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  border:none;
+    /* border-radius: 100%; */
+  display: inline-block;
+  font-size: 10px;
+  vertical-align:middle;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding-top: 2px;
+  padding-left: 5px;
+}
+.container_cart{
+display: flex;
+align-self:flex-end;
+font-size: medium;
+padding-top: 10px;
+font-size: 15px;
+padding-bottom: 20px;
+
+}
+
+/* .total_cart{
+  border: 0px;
+  text-align-last: right;
+  padding-Right: 20px;
+  font-weight: bold;
+  color: #235c4b;
+  padding-top: 2px;
+   padding-left: 5px; 
+
+} */
+
+.span{
+  color:#083644 ;
+  font-size: 16px;
+  padding: 4px;
+}
+
+.TableRow {
+  height: 200px;
+  width: 80vw;
+  color: white;
+  font-size: 17px;
+  text-align: center;
+}
+.TableRow .h2{
+  text-align-last: center;
+    font-weight: 500;
+    color:white;
+}
+.ServiceHeader{
+  padding-top:0px;
+  text-align-last: center;
+    color: white;
+    font-size: x-large;
+    margin:12px;
+}
+.serviceCount{
+  font-size: 2vh;
+}
+.serviceName{
+ font-size: 1vh;
+}
+.positives .serviceCount{
+    font-size: 2.5vh;
+    color:#083644 ;
+}
+.positives .serviceName{
+   font-size: 1vh;
+    color:gray;
+}
+
+@media screen and (min-width:601px) {
+  .total_cart{
+    /* width:4vw; */
+    font-size:21px;
+    font-weight: bold;
+    /* border: 0px; */ color:#083644 ;
+    text-align-last: right;
+    }
+    
+    .services{
+      font-weight: bold;
+      font-size: 20px;
+      text-decoration: none;
+      color: #083644;
+    }
+    .Title{
+      display: inline-block;
+      font-weight: revert;
+      color: darkslategray;
+      width: 90vw;
+      text-align: -webkit-center;
+      font-size: xx-large;
+      font-weight: 700;
+  }
+    
+.ServiceList{
+  
+  max-height: 118vh;
+    width: 92vw;
+}
+ }
+ 
+@media screen and (max-width:600px) {
+  .Title{
+    display: inline-block;
+    font-weight: revert;
+    color: darkslategray;
+    width: 99vw;
+    /* text-align: -webkit-center;s */
+    font-size: x-large;
+    font-weight: 900;
+    text-align-last: center
+}
+
+  .card-title {
+		margin-bottom: 0.5rem;
+		color: white;
+		font-size: 35px;
+	}
+  .container_cart{
+     font-size: 10px;
+   padding-top: 5px;}
+  .total_cart{
+    font-size: 18px;
+   /* padding-top: 3px; */
+   width:10vw;
+   font-weight: bold;
+   border: 0px;
+   
+ text-align-last: right;}
+ .services{
+   font-size: 14px;
+   font-weight: bold;
+   text-decoration: none;
+   color:#083644;
+ }
+ 
+.ServiceList{
+  max-height: 118vh;
+    width: 92vw;
+}
+ 
+ .serviceCount{
+   font-size: 3vh;
+ }
+ .serviceName{
+   font-size: 2vh;
+ }
+ .positives .serviceCount{
+    font-size: 1.75vh;
+     color:#083644 ;
+ }
+ .positives .serviceName{
+     font-size: 0.9vh;
+     color:gray;
+ }
+ }
+ 
+
+ .FloatBtn{
+	position:fixed;
+	bottom:20px;
+}
+
+/* .menuItems{
+  visibility:visible;
+font-size:24px;
+color:white;
+}
+.AnchorLink{
+  visibility: hidden;
+} */
