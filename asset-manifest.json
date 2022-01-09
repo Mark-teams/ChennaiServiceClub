@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ChennaiServiceClub/static/css/main.5dcffc6d.chunk.css",
-    "main.js": "/ChennaiServiceClub/static/js/main.cc59a1d1.chunk.js",
-    "main.js.map": "/ChennaiServiceClub/static/js/main.cc59a1d1.chunk.js.map",
+    "main.js": "/ChennaiServiceClub/static/js/main.fdae111f.chunk.js",
+    "main.js.map": "/ChennaiServiceClub/static/js/main.fdae111f.chunk.js.map",
     "runtime-main.js": "/ChennaiServiceClub/static/js/runtime-main.a6934451.js",
     "runtime-main.js.map": "/ChennaiServiceClub/static/js/runtime-main.a6934451.js.map",
     "static/css/2.95241aa6.chunk.css": "/ChennaiServiceClub/static/css/2.95241aa6.chunk.css",
@@ -23,6 +23,6 @@
     "static/css/2.95241aa6.chunk.css",
     "static/js/2.3b145ee1.chunk.js",
     "static/css/main.5dcffc6d.chunk.css",
-    "static/js/main.cc59a1d1.chunk.js"
+    "static/js/main.fdae111f.chunk.js"
   ]
 }
