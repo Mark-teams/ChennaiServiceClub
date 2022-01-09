@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import {
-    Card, CardBody,
-    CardTitle, CardSubtitle, Container, Row, Col
+    Card, Row, Col
 } from 'reactstrap';
 
 import "../../App.css"
@@ -11,17 +10,36 @@ background:white;
   height:15hv;
   width:150wv;
 `;
+const PositiveCardIcon= styled.div`
+height: 120px;
+    width: 120px;
+    border: 4px solid darkslategray;
+    display: table-cell;
+    text-align: center;
+    color: darkslategray;
+    vertical-align: middle;
+    border-radius: 50%;
+    font-size: 27px;
+    position: relative;
+    text-align: -webkit-center;
+    font-family:bold;
+`
+const PositiveCardHolder=styled.div`
+text-align: -webkit-center;
+`
 
 
 const positive = [{
+    "icon":"₹.199",
     "title": "Lowest Inspection Charges",
     "description": "If you availed the Services no need to pay the inspection charges, just need to pay the service charges. However in case if you are not availing the services need to pay the 199 inspection charges. Book us."
 },
-{
-    "title": "30 Days Service Warranty",
+{   "icon":"30 Days",
+    "title": "Service Warranty",
     "description": "We are giving 30 days warranty for all the services. If you get any problem in your AC in this warrant period. We will do the services for the free of cost. Just you need to pay for the replacement product if any."
 }, {
-    "title": "90 Days Gas Charging Warranty",
+    "icon":"90 Days",
+    "title": "Gas filling Charges & Warranty",
     "description": "We are giving 90 days warranty for the Gas Charging services. In case if you gas leaked within this time period. We will do the Gas Charging for free of cost. Book us for Gas Charging and avail 90 days Warranty."
 }]
 
@@ -36,6 +54,11 @@ export default function ServiceCount() {
                           <Col>
                               <Card>
                                   <div className="positiveCardbody">
+                                      <PositiveCardHolder>
+                                      <PositiveCardIcon>
+                                          {e.icon}
+                                          </PositiveCardIcon>
+                                         </PositiveCardHolder> 
                                       <div className="positiveCardtitle" tag="h5">{e.title}</div>
                                       <div className="positiveCardsubtitle" tag="h6" >{e.description}</div>
                                   </div>
@@ -51,17 +74,3 @@ export default function ServiceCount() {
     );
 }
 
-
-{/* <Table className="positives" striped hover size="sm">
-          <tr className="TableRow">
-                <th><p className="serviceCount">Lowest Inspection Charges</p></th>
-                <th><p className="serviceCount">30 Days Service Warranty</p></th>
-                <th><p className="serviceCount">90 Days Gas Charging Warranty</p></th>
-              </tr>
-              <tr className="TableRow">
-                <td><span className="serviceName">If you availed the Services no need to pay the inspection charges, just need to pay the service charges. However in case if you are not availing the services need to pay the 199 inspection charges. Book us.</span></td>
-                <td><span className="serviceName">We are giving 30 days warranty for all the services. If you get any problem in your AC in this warrant period. We will do the services for the free of cost. Just you need to pay for the replacement product if any.</span></td>
-                <td><span className="serviceName">We are giving 90 days warranty for the Gas Charging services. In case if you gas leaked within this time period. We will do the Gas Charging for free of cost. Book us for Gas Charging and avail 90 days Warranty.</span></td>
-                
-              </tr>
-          </Table> */}

@@ -12,9 +12,12 @@ import { deviceSize } from "../../components/responsive";
 import { SwipeSlider } from "./SwipeSlider";
 import { Services } from "./services";
 import { TopSection } from "./topSection";
-import ServiceCount from './ServiceCount';
-import Positives from './Positives'
-import Fab from '@material-ui/core/Fab'
+
+import Positives from './Positives';
+
+
+
+// import Fab from '@material-ui/core/Fab'
 
 import "./../../components/specialistAd/Feedback.css"
 
@@ -34,10 +37,6 @@ const ContentContainer = styled.div`
     padding: 5px;
   }
 `;
-
-
-
-
 const ListServices=styled.div`
 width: 100%;
 max-width: ${deviceSize.laptop}px;
@@ -49,7 +48,25 @@ padding: 1em;
 @media screen and (max-width: ${deviceSize.mobile}px) {
   padding: 5px;
 `;
+
+function NavLink (scrollToId) 
+{  
+ // window.scrollTo(0,1000);
+
+		document.getElementById(scrollToId).scrollIntoView({
+			behavior: 'smooth', // gives an ease-in-out effect to our scroll
+		});
+};
+
 export function HomePage(props) {
+
+  
+  window.onbeforeunload = function() { 
+    window.setTimeout(function () { 
+      window.location.pathname = 'chennai-service-club/'
+    }, 0); 
+    window.onbeforeunload = null; // necessary to prevent infinite loop, that kills your browser 
+  }
   return (
     <PageContainer>
       <TopSection>
@@ -65,9 +82,38 @@ export function HomePage(props) {
         <ContentContainer>      
         <SwipeSlider />
         </ContentContainer>
-        <ServiceCount />
+        {/* <ServiceCount /> */}
          <Positives />
-        <Marginer direction="vertical" margin="5em" />
+        {/* <Marginer direction="vertical" margin="3em" /> */}
+        <div><h3 className="Title">About us</h3></div>
+        <ContentContainer>      
+        <p className="text positiveCardsubtitle"><span className="tab">   </span>We at ChennaiServiceClub offer the full range of AC installation services through 
+        professionals so that you can enjoy the benefits of choosing the right AC service provider.
+              ChennaiServiceClub's service engineers are well-trained and always available to provide you with the most satisfactory service.
+              The services are available for an affordable price.
+          </p>
+          <div><h3 className="Title">Process we follow for AC Service</h3></div>
+                <ul className="text positiveCardsubtitle" style={{"text-align": "left"}}>
+         <li>Choose an AC repair service from our <a href='' onClick={() => NavLink("list-of-services")}><u style={{"color":"blue","cursor":"pointer"}}>list of services.</u></a></li>
+         <li>Choose a time slot - Our AC service center is available all days of the week.</li>
+         <li>Easy service - our expert AC technician completes service within one hour after ordering.</li>
+         <li>Ensure the AC repair work is handled by a trained and expert service technician</li>
+         <li>Quick and Efficient</li>
+         <li>Quality product</li>
+         <li>Reasonable rates and discounts</li>
+         <li>Customer-friendly staffs</li>
+         </ul>
+
+
+
+
+
+
+
+
+
+   
+        </ContentContainer>
       </InnerPageContainer>
       
       <Footer />

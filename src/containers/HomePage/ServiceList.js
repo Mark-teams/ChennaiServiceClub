@@ -13,7 +13,6 @@ import VideoScript from '../video/VideoScript';
 
 import disableScroll from 'disable-scroll';
 import {FaRupeeSign} from 'react-icons/fa';
-import { booleanTypeAnnotation } from '@babel/types';
 
 const CardContainer = styled.div`
   display: flex;
@@ -26,10 +25,12 @@ const CardContainer = styled.div`
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
   margin: 0.5em;
   margin-bottom: 1.3em;
+  border-radius: 10px;
   @media screen and (max-width: ${deviceSize.mobile}px) {
     font-size: 12px;
     width: 96vw;
   height: 113px;
+  border-radius: 8px;
 
     
   }
@@ -40,9 +41,12 @@ const ContentContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   flex: 1;
-  padding: 24px 2px 2px 2px;
+  padding: 24px 2px 2px 23px;
+
   @media screen and (max-width: ${deviceSize.mobile}px) {
     font-size: 12px;
+    padding: 14px 2px 2px 5px;
+
   }
   
 `;
@@ -57,6 +61,12 @@ left:50px;
 @media screen and (max-width: ${deviceSize.mobile}px) {
 left:40px;
 }
+`
+const ServiceIcon=styled.img`
+height: 50px;
+width: 50px;
+position: absolute;
+margin: 24px;
 `
 
 
@@ -115,7 +125,7 @@ function ServiceList(props) {
 
   const [buttonPopup, setButtonPopup] = useState(false);
   function popuptrigger() {
-    window.scrollTo(0, 800);
+    window.scrollTo(0, 1200);
           document.getElementById("placeOrderbtn").style.visibility="hidden";
 
     setButtonPopup(true);
@@ -165,7 +175,7 @@ function ServiceList(props) {
       if (props.location.query.quantity[index]===0){
         document.getElementById("addbutton " + index).style.visibility = "visible";
         document.getElementById("count " + index).style.visibility = "hidden";
-        // document.getElementById("placeOrderbtn").style.visibility="visible";
+        document.getElementById("placeOrderbtn").style.visibility="hidden";
 
 
       }
@@ -201,6 +211,12 @@ function ServiceList(props) {
   })
   })
 
+  window.onbeforeunload = function() { 
+    window.setTimeout(function () { 
+      window.location.pathname = '/chennai-service-club/'
+    }, 0); 
+    window.onbeforeunload = null; // necessary to prevent infinite loop, that kills your browser 
+  }
 
   // Create handleIncrement event handlers 
   return (
@@ -209,13 +225,14 @@ function ServiceList(props) {
       <ContentContainer className="list">
         <Router >
           <div >
-            {console.log(props.location.query.services.length)}
             <h2 className="Title">{props.location.query.title}</h2>
             {
               props.location.query.services.map((item, index) => <CardContainer><ContentContainer>
                 <span className="services">{item}</span>
+
+                <ServiceIcon src={"chennai-service-club/"+props.location.query.serviceIcon[index]} alt={props.location.query.serviceIcon[index]}/>
                 <div className="container_cart">
-                  <span className="span">Minimun Cost: Rs.</span>
+                  <span className="span">Minimun Cost: ₹.</span>
                   <span id={"total " + index} key={index} className="total_cart">{props.location.query.amount[index]}</span>
                   <Addbutton id={"addbutton " + index}  onClick={() => viewCount(index)}>+Add</Addbutton>
                   <div id={"count " + index} style={{ "visibility": "hidden", "align": "right","margin-right":"2vw" }}>
@@ -234,7 +251,7 @@ function ServiceList(props) {
 
 
             <Link  id="placeOrderbtn" style={{"visibility":"hidden"}} onClick={popuptrigger} to={{ pathname: `/categories`, query: { title: props.location.query.title, Servicelist: props.location.query.services } }} >
-        <Fab className="FloatBtn" style={{position:"fixed", "z-index":"2","width":"98%","border-radius":"0","color":"white","font-size":"15px","background": "darkslategray"}}><span  style={{"width": "100%",
+        <Fab className="FloatBtn" style={{position:"fixed", "z-index":"2","width":"98%","border-radius":"0","color":"white","font-size":"15px","background": "darkslategray","right": "1vw"}}><span  style={{"width": "100%",
     "text-align-last": "left",
     "margin-left": "2vw"}}><p style={{"max-width":"30px","min-width":"20px","border-style": "solid","border-width": "thin","text-align-last":"center"}} id="CartCount"/></span><p style={{"position": "absolute"}}>Place order</p>
     <span  style={{"width": "100%", "text-align-last": "right","margin-right": "50vw"}}>

@@ -62,7 +62,7 @@ const LeftBottomContainer = styled.div`
 const Title = styled.h2`
   margin: 0;
   margin-bottom: 13px;
-  color: #000;
+  color: darkslategray;
   font-weight: 600;
   font-size: 20px;
 `;
@@ -119,28 +119,28 @@ export function Footer(props) {
     <FooterContainer>
       <TopContainer>
         <ContentContainer>
-          <Title>Categories</Title>
-          <FLink>Car Repair</FLink>
-          <FLink>Carpentry</FLink>
-          <FLink>Landscaping</FLink>
-          <FLink>Cleaning</FLink>
-          <FLink>Home Improvement</FLink>
-          <FLink>Demolition</FLink>
-          <FLink>Management</FLink>
-          <FLink>Others</FLink>
+          <Title>Services</Title>
+          <FLink>General Service</FLink>
+          <FLink>Deep Cleanig Service</FLink>
+          <FLink>Foam Wash Service</FLink>
+          <FLink>AC Repair</FLink>
+          <FLink>Water Leakage</FLink>
+          <FLink>Cooling Issue</FLink>
+          <FLink>Noise Issue</FLink>
+          <FLink>Relocation</FLink>
         </ContentContainer>
         <ContentContainer>
-          <Title>Access</Title>
-          <FLink>Login</FLink>
-          <FLink>Join Us</FLink>
-          <FLink>Login as Specialist</FLink>
-          <FLink>Become a Specialist</FLink>
+          <Title >locations</Title>
+          <FLink>Chennai</FLink>
+          <FLink></FLink>
+          <FLink></FLink>
+          <FLink></FLink>
         </ContentContainer>
       </TopContainer>
       <BottomContainer>
         <LeftBottomContainer>
           <BrandLogo hideLogo color="#8A8A8A" textSize={isMobile ? 20 : 25} />
-          <PrivacyText> &#169; All Rights Reserved. 2020</PrivacyText>
+          <PrivacyText> &#169; All Rights Reserved. 2021</PrivacyText>
         </LeftBottomContainer>
         <RightBottomContainer>
           <SocialIcon>
@@ -149,6 +149,9 @@ export function Footer(props) {
           <SocialIcon>
             <FontAwesomeIcon icon={faTwitter} />
           </SocialIcon>
+          {/* <SocialIcon>
+          <PrivacyText>developed by Mark96Solutions.com</PrivacyText>
+          </SocialIcon> */}
         </RightBottomContainer>
       </BottomContainer>
     </FooterContainer>

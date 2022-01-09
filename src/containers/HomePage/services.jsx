@@ -25,18 +25,12 @@ const ServicesContainer = styled.div`
   }
 `;
 
-const Title = styled.h1`
-  font-weight: 900;
-  color: #000;
-
-  @media screen and (max-width: ${deviceSize.mobile}px) {
-    font-size: 25px;
-  }
-`;
+// 
 
 const ServicesWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
+  padding-left: 3px;
 `;
 
 const CardContainer = styled.div`
@@ -49,8 +43,10 @@ const CardContainer = styled.div`
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
   margin: 0.5em;
   margin-bottom: 1.3em;
+  border-radius:20px;
   @media screen and (max-width: ${deviceSize.mobile}px) {
     width: 45vw;
+    border-radius:10px;
   }
 `;
 
@@ -107,6 +103,7 @@ export function Services(props) {
     "rate": 4985,
     "rating": 4,
     "services": ["General Service", "Deep Cleaning Service", "Foam Wash Service"],
+    "serviceIcon":["service.png","deepclean.png","foam-wash.png"],
     "price": ["499", "1399", "950"],
     "quantity":["0","0","0"],
     "specialist": {
@@ -120,6 +117,7 @@ export function Services(props) {
     "rate": 2500,
     "rating": 3,
     "services": ["Not Working", "Water Leakage", "Not Cooling", "Noise Problem"],
+    "serviceIcon":["repair.png","leaking.png","cooling.png","noise.png"],
     "price": ["450", "450", "450", "450"],
     "quantity":["0","0","0","0"],
     "specialist": {
@@ -133,6 +131,7 @@ export function Services(props) {
     "rate": 3295,
     "rating": 5,
     "services": ["Inspection Charges"],
+    "serviceIcon":["inspection.png"],
     "quantity":["0"],
     "price": ["249"],
     "specialist": {
@@ -146,6 +145,7 @@ export function Services(props) {
     "rate": 4875,
     "rating": 5,
     "services": ["Split AC Installation", "Window AC Installation", "UnInstallation","Relocate"],
+    "serviceIcon":["split.png","window-ac.png","install.png","relocation.png"],
     "price": ["1350", "849", "649","1999"],
     "quantity":["0","0","0","0"],
     "specialist": {
@@ -159,7 +159,7 @@ const myRef = useRef(null)
 function executeScroll(){
   //  myRef.current.scrollIntoView();
 
-  window.scrollTo(0,1000);
+  window.scrollTo(0,1250);
 }
 const AnimatedSwitch = withRouter(({ location }) => (
 
@@ -176,7 +176,7 @@ const AnimatedSwitch = withRouter(({ location }) => (
 
 window.onbeforeunload = function() { 
   window.setTimeout(function () { 
-    window.location.pathname = '/'
+    window.location.pathname = '/chennai-service-club/'
   }, 0); 
   window.onbeforeunload = null; // necessary to prevent infinite loop, that kills your browser 
 }
@@ -184,37 +184,43 @@ window.onbeforeunload = function() {
     
     <ServicesContainer>
       
-      <div className="Title">Our Services</div>
-      <p className="text"><span className="tab">   </span>The No.1 AC Servicing Company in Chennai. We have 90+ Service Centers in Chennai. We have more than Ten Thousand clients in Chennai. Our Services will be low cost in city, however quality will be similar to that of international quality.</p>
-      <Router>
+
+      <div className="Title" id="list-of-services" >Our Services</div>
+      <p className="text positiveCardsubtitle"><span className="tab">   </span>The No.1 AC Servicing Company in Chennai. We have 90+ Service Centers in Chennai. We have more than Ten Thousand clients in Chennai. Our Services will be low cost in city, however quality will be similar to that of international quality.</p>
+<Router>
 
       
         <ServicesWrapper>
           {
 
-            user.map((item) => <Link style={{ textDecoration: 'none' }} to={{ pathname: `/services`, query: { specialist: item.specialist,title:item.title, services: item.services, amount: item.price,quantity:item.quantity } }} ><CardContainer >
+            user.map((item) => <Link style={{ textDecoration: 'none' }} to={{ pathname: `/services`, query: { specialist: item.specialist,title:item.title, services: item.services, amount: item.price,quantity:item.quantity,serviceIcon:item.serviceIcon } }} ><CardContainer >
             <TopContainer>
             <ServiceThumbnail>
-              <img src={item.thumbnailUrl} alt={item.title} />
+              <img src={item.thumbnailUrl} alt={"AC "+item.title}/>
             </ServiceThumbnail>
           </TopContainer>
-
-
               <ContentContainer>
-
-          
-      <span className="services">{item.title} </span><AiOutlineArrowRight style={{"color":"grey","font-size":"18px","font-weight":"bolder","vertical-align": "top", "position": "absolute","align-self": "self-end"}}/></ContentContainer></CardContainer></Link>)
+      <span className="services">{item.title} </span>
+      <AiOutlineArrowRight style={{"color":"grey","font-size":"18px","font-weight":"bolder","vertical-align": "top", "position": "absolute","align-self": "self-end"}}/>
+      </ContentContainer>
+      </CardContainer>
+      </Link>)
           }
         </ServicesWrapper>
         {/* <TransitionGroup>
         <CSSTransition className="list" timeout={1000}>
         <Switch> */}
+        <p className="text positiveCardsubtitle"><span className="tab">   </span>Among the many ac service providers in Chennai, ChennaiServiceClub is one of the most prominent.
+The company deals with all types of air conditioning, including cassette, window, split, ducting, and central and offers installation and after-sales services.
+Our service is available throughout Chennai.Therefore, you can reach us at any location regardless of your township. <br/>ChennaiServiceClub believes living a comfortable life is essential for all people, but during the summer season, it may seem impossible to maintain a comfortable home or office unless you have a functioning air conditioner. ChennaiServiceClub is now there to help you with this issue by providing you with all kinds of air conditioners installation as per your requirements.
+Various types of AC units are on the market, including cassette ACs, ducting ACs, split ACs, window ACs, and central ACs.</p>
+
         <AnimatedSwitch ref={myRef}  />
         {/* </Switch>
         </CSSTransition>
         </TransitionGroup> */}
         
       </Router>
-    </ServicesContainer>
+          </ServicesContainer>
   );
 }

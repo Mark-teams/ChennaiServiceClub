@@ -1,32 +1,51 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import React, { Component } from 'react'
+import React, { Component, useState   } from 'react'
 import { withRouter } from 'react-router-dom';
-import { DateTimePickerComponent } from '@syncfusion/ej2-react-calendars';
+// import { DateTimePickerComponent } from '@syncfusion/ej2-react-calendars';
 // import { Popup } from 'semantic-ui-react';
 // import Popup from '../../components/Popup';
 import './Popup.css'
+import DatePickerBlock from "./DateBlock";
+import TimePicker from "react-bootstrap-time-picker";
+import "react-datepicker/dist/react-datepicker.css";
 
-const Nexmo = require('nexmo');
+// import '@fortawesome/fontawesome-free/css/all.min.css'; 
+// import'bootstrap-css-only/css/bootstrap.min.css'; 
+// import'mdbreact/dist/css/mdb.css';
 
-const nexmo = new Nexmo({
-  apiKey: "95a5046b",
-  apiSecret: "bXJrp7KeuiGwuJI1"
-})
+async function postData(url = '', d = {}) {
+  // Default options are marked with *
+   const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json' 
+    },
+   body: JSON.stringify(d), // body data type must match "Content-Type" header
+  });
+  return response; 
 
-
-// Init Nexmo
+}
 
 class FormPage extends Component{
 constructor(props){
   super(props)
+  this.handleTimeChange = this.handleTimeChange.bind(this);
+
+  this.state = { time: 0 };
+
   this.state={
     username:'',
     phonenumber:'',
     address:'',
-    TimeFrom:'',
-    TimeTo:''
+    Date:'',
+    time: 0
   }
 }
+
+getPickerValue = value => {
+  console.log(value);
+};
+
 handleUsernameChange=(event)=>{
   this.setState({
     username:event.target.value
@@ -47,53 +66,62 @@ handleTimeFromChange=(event)=>{
     TimeFrom:event.target.value
   })
 }
-handletimeToChange=(event)=>{
-  this.setState({
-    TimeTo:event.target.value
-  })
-}
 
-fetchServer = ({ number, text }) => {
-  console.log('send');
-  fetch('/', {
-    method: 'post',
-    headers: {
-      'Content-type': 'application/json'
-    },
-    body: JSON.stringify({ number, text })
-  })
-    .then(function (res) {
-      console.log(" Response ",res);
-    })
-    .catch(function (err) {
-      console.log("Error ",err);
-    });
-};
+// fetchServer = ({ number, text }) => {
+//   console.log('send');
+//   fetch('/', {
+//     method: 'post',
+//     headers: {
+//       'Content-type': 'application/json'
+//     },
+//     body: JSON.stringify({ number, text })
+//   })
+//     .then(function (res) {
+//       console.log(" Response ",res);
+//     })
+//     .catch(function (err) {
+//       console.log("Error ",err);
+//     });
+// };
 
 
 
 handleSubmit= event=>{
 event.preventDefault();
-var message=`Category:${this.props.location.query.title},Service:${this.props.location.query.service} Name: ${this.state.username}, phoneNumber : ${this.state.phonenumber}, Address :${this.state.address}, Shedule timing From : ${this.state.TimeFrom},Shedule timing To :  ${this.state.TimeTo}`
-var servernumber=`917397278070`
-this.fetchServer({ servernumber, message });
-var from = "Vonage APIs"
-var to = "917397278070"
-alert(message)
-nexmo.message.sendSms(from, to, message, { type: 'unicode' }, (err, responseData) => {
-  if (err) {
-      console.log(err);
-      alert(err,from,to,message)
-  } else {
-      if(responseData.messages[0]['status'] === "0") {
-          console.log("Message sent successfully.");
-          alert("successfully");
-      } else {
-          console.log(`Message failed with error: ${responseData.messages[0]['error-text']}`);
-          alert("Failed")
-        }
+var optedService='\n';
+
+for (var index=0; index<this.props.location.query.Servicelist.length;index++){
+  // console.log(this.props.location.query.Servicelist[index])
+  if (eval(document.getElementById(index).innerHTML)>0){
+  optedService+=  this.props.location.query.Servicelist[index]+' => '+document.getElementById(index).innerHTML+' => '+document.getElementById("total " + index).innerHTML+"\n"
   }
-});
+}
+var timestr=''
+var schtime=0
+if ((this.state.time/3600)>11){
+  schtime=(Number(this.state.time)/3600)-12
+  if (schtime===0){
+    timestr="12 PM "
+  }
+  else{
+  timestr=String(schtime)+ " PM "
+  }
+}
+else{
+  schtime=Number(this.state.time)/3600
+  timestr=String(schtime)+ " AM "
+}
+console.log("Pros",this.props.location.query)
+optedService=optedService+"*Total Amount* :"+document.getElementById("CartAmount").innerHTML
+var message=`\t*ChennaiServiceClub*\n*Category*:${this.props.location.query.title}\n${optedService} \n\n*Name*: ${this.state.username}, \n*PhoneNumber* : ${this.state.phonenumber}, \n*Address* :${this.state.address}, \n*Time* : ${timestr},\n*Date* : ${document.getElementById('DatePicker').value}`
+const msg = {message:message};
+console.log(msg)
+
+postData('https://messagesenderdev.herokuapp.com/sendmessage', msg)
+  .then(data => {
+    console.log(data); // JSON data parsed by `data.json()` call
+  });
+
 
 document.getElementById("PopupWindow").innerHTML=`<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
 <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
@@ -104,18 +132,30 @@ document.getElementById("PopupWindow").innerHTML=`<svg class="checkmark" xmlns="
 
 
 
+handleTimeChange(time) {
+  console.log(time);     // <- prints "3600" if "01:00" is picked
+  this.setState({ time });
+}
+handleDateChange(Date) {
+  console.log("Date",Date);     // <- prints "3600" if "01:00" is picked
+  this.setState({ Date });
+}
 
   render(){
+    // const { startDate } = this.state;
+    
+   
     var total=0;
-  console.log("form", this.props)
+  
+
   for(var i=0;i<this.props.location.query.Servicelist.length;i++){
     console.log(document.getElementById(i).innerText,document.getElementById(String(i)).innertext);
     if(Number(document.getElementById(String(i)).innerHTML)>0){
    total += Number(document.getElementById("total " + i).innerText);
     }
   }
-  console.log("Total",total);
-  
+ 
+
   return (
 
 <div id="PopupWindow">
@@ -124,22 +164,27 @@ document.getElementById("PopupWindow").innerHTML=`<svg class="checkmark" xmlns="
       <form onSubmit={this.handleSubmit}>
         <div>
           <b >Name</b>
-          <p><input placeholder="Name" id="username" value={this.state.username} onChange={this.handleUsernameChange} className="input"></input></p>
+          <p><input placeholder="Name" id="username" value={this.state.username} onChange={this.handleUsernameChange} className="input" required></input></p>
           <b>Phone</b>
           <p><input className="input" name="phone" value={this.state.phonenumber} onChange={this.handlePhonenumberChange}
             defaultCountry="IN"
-            placeholder="Enter phone number" visiblility="hidden"></input>
+            placeholder="Enter phone number" visiblility="hidden" required></input>
           </p>
           <b>Address</b>
-          <p><input placeholder="Address" name="Address" className="input" value={this.state.address} onChange={this.handleAddressChange} ></input></p>
+          <p><input placeholder="Address" name="Address" className="input" value={this.state.address} onChange={this.handleAddressChange} required></input></p>
           <div>
-            <b>Availability</b>
+            <b>Date</b>
             <p className="schedule">
-              <p><DateTimePickerComponent width="90%" placeholder="From" value={this.state.TimeFrom} onChange={this.handleTimeFromChange}></DateTimePickerComponent></p>
-
-              <p><DateTimePickerComponent width="90%" placeholder="To" value={this.state.TimeTo} onChange={this.handleTimeToChange}></DateTimePickerComponent></p>
+               <DatePickerBlock />
+               </p>
+          </div>
+          <div>
+            <b>Time</b>
+            <p className="schedule">
+            <TimePicker start="10:00" onChange={this.handleTimeChange} value={this.state.time} end="21:00" step={60} style={{"width": "90%","height": "35px"}} />
             </p>
           </div>
+        
           <p>Minimun Consultancy fee Rs.{total}/- only</p>
 
         </div>
@@ -148,6 +193,8 @@ document.getElementById("PopupWindow").innerHTML=`<svg class="checkmark" xmlns="
       </div>
     )
 }
+
+
 }
 
 export default withRouter(FormPage);

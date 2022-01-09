@@ -18,8 +18,9 @@ const ButtonWrapper = styled.button`
   border: 2px solid #fff;
   background-color: transparent;
   height: 50px;
-  padding-bottom:5px;
+  padding:10px;
   border-radius: 50px;
+  
   color: #3498db;
  font-size: ${({ size }) => (size ? size + "px" : "18px")};
   transition: all 200ms ease-in-out;

@@ -4,7 +4,7 @@
   /* display: flex; */
   justify-content: flex-end;
   /* align-items: center; */
-
+ z-index:1;
   position: absolute;
     right: 5vw;
     top: 3vh;
@@ -70,6 +70,7 @@
   display: flex;
   justify-content: start;
   align-items: center;
+ 
 }
 
 span {

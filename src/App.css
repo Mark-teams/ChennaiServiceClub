@@ -275,3 +275,7 @@ color:white;
 .AnchorLink{
   visibility: hidden;
 } */
+.DatePicker{
+width: 90%;
+height:40px;
+}

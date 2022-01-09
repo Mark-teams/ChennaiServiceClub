@@ -9,6 +9,7 @@ function trigger(props){
     console.log("trigger closed");
     disableScroll.off()
     props.setTrigger(false);
+    // document.getElementById("placeOrderbtn").style.visibility="visible";
     
 }
 

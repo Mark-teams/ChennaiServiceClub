@@ -39,7 +39,7 @@ export function BrandLogo(props) {
       {!hideLogo && (
         <Link to="/">
           <LogoImage size={logoSize}>
-            <img src={LogoImg} alt="ChennaiServiceClub logo" />
+            <img src={LogoImg} alt="Chennai-Service-Club logo" />
           </LogoImage>
         </Link>
       )}
