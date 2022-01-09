@@ -6,24 +6,30 @@ import { Marginer } from "../../components/marginer";
 import { deviceSize } from "../../components/responsive";
 
 import { IoMdCall } from "react-icons/io";
-// import ParticleAnimation from 'react-particle-animation'
+import ParticleAnimation from 'react-particle-animation'
+
+// import Particle from "react-particles-js";
+// import particlesConfig from "./particlesConfig.json";
+
 
 import TopSectionBackgroundImg from "../../images/landing-page.jpg";
-import TheBestSpecialistsImg from "../../images/Work only with the best.png";
+import TheBestSpecialistsImg from "../../images/farming.png";
 
 const TopSectionContainer = styled.div`
   width: 100%;
-  height: 800;
+  height: 700;
   background-position: 0px -150px;
   background-size: cover;
   // background: url(${TopSectionBackgroundImg}) no-repeat;
 
   @media screen and (max-width: ${deviceSize.mobile}px) {
     height: 300px;
+    background-color:#264653;
     background-position: 0px 0px;
   }
   @media screen and (min-width: ${deviceSize.desktop}px) {
     height: 800px;
+    background-color:#264653;
     background-position: 0px 0px;
   }
 `;
@@ -40,9 +46,9 @@ const TopSectionInnerContainer = styled.div`
   width: 100%;
   height: 50%;
   display: flex;
- position:relative;
+ 
   align-items: center;
-  
+  position: absolute; 
   justify-content: space-evenly;
 `;
 
@@ -62,10 +68,11 @@ const LogoContainer = styled.div`
   flex-direction: column;
   padding-left: 3vw;
  
+  
   @media screen and (max-width: ${deviceSize.mobile}px) {
     align-items: center;
-    position: absolute;
-    top: 13vh;
+    // position: fixed;
+    top: 12vh;
   }
 `;
 
@@ -99,22 +106,21 @@ export function TopSection(props) {
       
       <BackgroundFilter>
         {children}
-        
+        {/* <Particle  style={{"height": "200px"}}params={particlesConfig}  /> */}
+
         {/* <Particles params={{"particles":{"number":{"value": window.innerWidth >600 ? 60 : 30},"size":{"value":window.innerWidth >600 ? 5 : 5}}}} /> */}
-         {/* <ParticleAnimation className ="particles"  style ={{ "overflow": "hidden", "position": "initial"  }} numParticles={window.innerWidth >600 ? 50 : 30}
+         <ParticleAnimation className ="particles" style={{"height":  window.innerWidth >600 ? 700 : 200+"px"}}  
          background={{ r: 38, g: 70, b: 83, a:82}}
          color={{r:255,g:255,b:255,a:255}}
          particleRadius={1.0}
          lineWidth={0.5}
-         particleSpeed={0.5}/>  */}
-        <TopSectionInnerContainer>
+         particleSpeed={1.0}
+         numParticles={window.innerWidth >600 ? 50 : 30}
+         /> 
+       
+        <TopSectionInnerContainer >
 
           <LogoContainer>
-
-            {/* <BrandLogo
-              logoSize={isMobile ? 40 : 65}
-              textSize={isMobile ? 35 : 55}
-            /> */}
             <Marginer direction="vertical" margin={8} />
             <SloganText>No.1 AirConditioner Service Team</SloganText>
             <SloganText>in Chennai</SloganText>
