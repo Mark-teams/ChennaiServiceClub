@@ -237,7 +237,8 @@ padding-bottom: 20px;
    
  text-align-last: right;}
  .services{
-   font-size: 14px;
+   font-size: 18px;
+   padding-left: 2vw;
    font-weight: bold;
    text-decoration: none;
    color:#083644;

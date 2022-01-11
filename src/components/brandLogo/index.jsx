@@ -37,13 +37,13 @@ export function BrandLogo(props) {
   return (
     <BrandLogoContainer>
       {!hideLogo && (
-        <Link to="/">
+        <Link to="/ChennaiServiceClub/">
           <LogoImage size={logoSize}>
             <img src={LogoImg} alt="Chennai-Service-Club logo" />
           </LogoImage>
         </Link>
       )}
-      <StyledLink to="/">
+      <StyledLink to="/ChennaiServiceClub/">
         <LogoTitle size={textSize} color={color}>
           ChennaiServiceClub
         </LogoTitle>
