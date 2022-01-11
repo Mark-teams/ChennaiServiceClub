@@ -200,7 +200,7 @@ window.onbeforeunload = function() {
             </ServiceThumbnail>
           </TopContainer>
               <ContentContainer>
-      <span className="services">{item.title} </span>
+      <span className="services-card">{item.title} </span>
       <AiOutlineArrowRight style={{"color":"grey","font-size":"18px","font-weight":"bolder","vertical-align": "top", "position": "absolute","align-self": "self-end"}}/>
       </ContentContainer>
       </CardContainer>
