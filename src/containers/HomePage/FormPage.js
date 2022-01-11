@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import React, { Component, useState   } from 'react'
+import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom';
 // import { DateTimePickerComponent } from '@syncfusion/ej2-react-calendars';
 // import { Popup } from 'semantic-ui-react';
@@ -98,6 +98,10 @@ for (var index=0; index<this.props.location.query.Servicelist.length;index++){
 }
 var timestr=''
 var schtime=0
+if(this.state.time===0){
+  timestr="10 AM "
+}
+else{
 if ((this.state.time/3600)>11){
   schtime=(Number(this.state.time)/3600)-12
   if (schtime===0){
@@ -111,6 +115,8 @@ else{
   schtime=Number(this.state.time)/3600
   timestr=String(schtime)+ " AM "
 }
+}
+
 console.log("Pros",this.props.location.query)
 optedService=optedService+"*Total Amount* :"+document.getElementById("CartAmount").innerHTML
 var message=`\t*ChennaiServiceClub*\n*Category*:${this.props.location.query.title}\n${optedService} \n\n*Name*: ${this.state.username}, \n*PhoneNumber* : ${this.state.phonenumber}, \n*Address* :${this.state.address}, \n*Time* : ${timestr},\n*Date* : ${document.getElementById('DatePicker').value}`
@@ -149,7 +155,7 @@ handleDateChange(Date) {
   
 
   for(var i=0;i<this.props.location.query.Servicelist.length;i++){
-    console.log(document.getElementById(i).innerText,document.getElementById(String(i)).innertext);
+    console.log(document.getElementById(i).innerText,document.getElementById(String(i)).innerText);
     if(Number(document.getElementById(String(i)).innerHTML)>0){
    total += Number(document.getElementById("total " + i).innerText);
     }
@@ -166,16 +172,16 @@ handleDateChange(Date) {
           <b >Name</b>
           <p><input placeholder="Name" id="username" value={this.state.username} onChange={this.handleUsernameChange} className="input" required></input></p>
           <b>Phone</b>
-          <p><input className="input" name="phone" value={this.state.phonenumber} onChange={this.handlePhonenumberChange}
+          <p><input className="input" name="phone"  type="number"  value={this.state.phonenumber} onChange={this.handlePhonenumberChange}
             defaultCountry="IN"
             placeholder="Enter phone number" visiblility="hidden" required></input>
           </p>
           <b>Address</b>
-          <p><input placeholder="Address" name="Address" className="input" value={this.state.address} onChange={this.handleAddressChange} required></input></p>
+          <p><input placeholder="Address" name="Address" className="input" value={this.state.address} onChange={this.handleAddressChange} ></input></p>
           <div>
             <b>Date</b>
             <p className="schedule">
-               <DatePickerBlock />
+               <DatePickerBlock required/>
                </p>
           </div>
           <div>
@@ -185,10 +191,11 @@ handleDateChange(Date) {
             </p>
           </div>
         
-          <p>Minimun Consultancy fee Rs.{total}/- only</p>
+          <p>Minimun Consultancy fee Rs.{document.getElementById("CartAmount").innerHTML}/- only</p>
 
-        </div>
+        
         <button className="Submitbtn" type="submit">submit Order </button>
+        </div>
       </form>
       </div>
     )

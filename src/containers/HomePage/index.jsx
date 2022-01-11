@@ -63,7 +63,7 @@ export function HomePage(props) {
   
   window.onbeforeunload = function() { 
     window.setTimeout(function () { 
-      window.location.pathname = 'chennai-service-club/'
+      window.location.pathname = '/ChennaiServiceClub'
     }, 0); 
     window.onbeforeunload = null; // necessary to prevent infinite loop, that kills your browser 
   }
@@ -74,7 +74,8 @@ export function HomePage(props) {
       </TopSection>
       <InnerPageContainer>
         <Marginer direction="vertical" margin="2em" />
-        <ContentContainer>      <Services />
+        <ContentContainer id="list-of-services">     
+           <Services />
         </ContentContainer>
         <ListServices id="service_Details"></ListServices>
         <Marginer direction="vertical" margin="3em" />

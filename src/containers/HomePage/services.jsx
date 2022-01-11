@@ -15,7 +15,7 @@ import {TransitionGroup, CSSTransition } from "react-transition-group";
 import './Popup.css';
 
 const ServicesContainer = styled.div`
-  width: 90vw;
+  width: 86vw;
   align-self: center;
   display: flex;
   flex-direction: column;
@@ -176,7 +176,7 @@ const AnimatedSwitch = withRouter(({ location }) => (
 
 window.onbeforeunload = function() { 
   window.setTimeout(function () { 
-    window.location.pathname = '/chennai-service-club/'
+    window.location.pathname = '/ChennaiServiceClub'
   }, 0); 
   window.onbeforeunload = null; // necessary to prevent infinite loop, that kills your browser 
 }

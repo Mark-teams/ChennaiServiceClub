@@ -213,7 +213,7 @@ function ServiceList(props) {
 
   window.onbeforeunload = function() { 
     window.setTimeout(function () { 
-      window.location.pathname = '/chennai-service-club/'
+      window.location.pathname = '/ChennaiServiceClub'
     }, 0); 
     window.onbeforeunload = null; // necessary to prevent infinite loop, that kills your browser 
   }
@@ -230,10 +230,10 @@ function ServiceList(props) {
               props.location.query.services.map((item, index) => <CardContainer><ContentContainer>
                 <span className="services">{item}</span>
 
-                <ServiceIcon src={"chennai-service-club/"+props.location.query.serviceIcon[index]} alt={props.location.query.serviceIcon[index]}/>
+                <ServiceIcon src={"https://mark-teams.github.io/ChennaiServiceClub/"+props.location.query.serviceIcon[index]} alt={props.location.query.serviceIcon[index]}/>
                 <div className="container_cart">
-                  <span className="span">Minimun Cost: ₹.</span>
-                  <span id={"total " + index} key={index} className="total_cart">{props.location.query.amount[index]}</span>
+                  <span className="span">Minimun Cost: ₹. {props.location.query.amount[index]}</span>
+                  <span style={{"visibility":"hidden","position": "absolute"}} id={"total " + index} key={index} className="total_cart">{props.location.query.amount[index]}</span>
                   <Addbutton id={"addbutton " + index}  onClick={() => viewCount(index)}>+Add</Addbutton>
                   <div id={"count " + index} style={{ "visibility": "hidden", "align": "right","margin-right":"2vw" }}>
                     <button className="btn_cart" onClick={() => handleQuantityDecrease(index, props.location.query.services.length)} >-</button>

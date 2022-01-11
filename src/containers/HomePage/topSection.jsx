@@ -2,6 +2,7 @@ import React from "react";
 import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 import { Button } from "../../components/button";
+
 import { Marginer } from "../../components/marginer";
 import { deviceSize } from "../../components/responsive";
 
@@ -17,7 +18,7 @@ import TheBestSpecialistsImg from "../../images/farming.png";
 
 const TopSectionContainer = styled.div`
   width: 100%;
-  height: 700;
+  height: 650px;
   background-position: 0px -150px;
   background-size: cover;
   // background: url(${TopSectionBackgroundImg}) no-repeat;
@@ -27,8 +28,13 @@ const TopSectionContainer = styled.div`
     background-color:#264653;
     background-position: 0px 0px;
   }
+  @media screen and (min-width:${deviceSize.mobile}px) and (max-width:800px){
+    height: 400px;
+    background-color:#264653;
+    background-position: 0px 0px;
+  }
   @media screen and (min-width: ${deviceSize.desktop}px) {
-    height: 800px;
+    height: 600px;
     background-color:#264653;
     background-position: 0px 0px;
   }
@@ -46,20 +52,32 @@ const TopSectionInnerContainer = styled.div`
   width: 100%;
   height: 50%;
   display: flex;
- 
+
   align-items: center;
   position: absolute; 
   justify-content: space-evenly;
+  @media screen and (min-width:${deviceSize.mobile}px) and (max-width:1000px){
+    top: 0vh;
+  }
+  @media screen and (min-width: 1000px) {
+     top:30vh;
+  }
+
 `;
 
 const StandoutImage = styled.div`
-  width: 44em;
-  height: 34em;
+  width: 38vw;
+  height: 83vh;
+  position: relative;
+  align-self: baseline;
 
   img {
-    width: 80%;
+    width: 70%;
     height: 70%;
+    max-height:400px;
+    max-width:400px;
   }
+  
 `;
 
 const LogoContainer = styled.div`

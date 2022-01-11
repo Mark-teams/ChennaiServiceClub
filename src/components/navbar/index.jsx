@@ -5,7 +5,6 @@ import { BrandLogo } from "../brandLogo";
 // import { FaWhatsapp } from "react-icons/fa";
 // import {HiMenuAlt3} from "react-icons/hi";
 // import { Marginer } from "../marginer";
-import { Link } from "react-router-dom";
 import { deviceSize } from "../responsive";
 // import { useMediaQuery } from "react-responsive";
 // import Navbarfunction from "./components/Navbar";
