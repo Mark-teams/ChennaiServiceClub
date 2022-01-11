@@ -192,10 +192,10 @@ handleDateChange(Date) {
           </div>
         
           <p>Minimun Consultancy fee Rs.{document.getElementById("CartAmount").innerHTML}/- only</p>
-
+          </div>
         
         <button className="Submitbtn" type="submit">submit Order </button>
-        </div>
+        
       </form>
       </div>
     )

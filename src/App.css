@@ -58,9 +58,9 @@
   letter-spacing:1px;
 }
 .Submitbtn{
-  /* margin-top:1rem; */
+  margin-top:1rem;
  width:90%;
- padding:2%;
+ padding:4%;
   background:rgb(23, 83, 99);
   color:#fff;
   text-transform:uppercase;
