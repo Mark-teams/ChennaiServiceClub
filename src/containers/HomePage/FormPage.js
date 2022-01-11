@@ -128,7 +128,6 @@ postData('https://messagesenderdev.herokuapp.com/sendmessage', msg)
     console.log(data); // JSON data parsed by `data.json()` call
   });
 
-
 document.getElementById("PopupWindow").innerHTML=`<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
 <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
 <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
@@ -151,13 +150,13 @@ handleDateChange(Date) {
     // const { startDate } = this.state;
     
    
-    var total=0;
+    // var total=0;
   
 
   for(var i=0;i<this.props.location.query.Servicelist.length;i++){
     console.log(document.getElementById(i).innerText,document.getElementById(String(i)).innerText);
     if(Number(document.getElementById(String(i)).innerHTML)>0){
-   total += Number(document.getElementById("total " + i).innerText);
+  //  total += Number(document.getElementById("total " + i).innerText);
     }
   }
  

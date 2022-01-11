@@ -69,8 +69,7 @@ const StandoutImage = styled.div`
   width: 38vw;
   height: 83vh;
   position: relative;
-  align-self: baseline;
-
+top:30vh;
   img {
     width: 70%;
     height: 70%;
