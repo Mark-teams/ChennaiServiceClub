@@ -155,6 +155,8 @@ function ServiceList(props) {
 
 
   const handleQuantityDecrease = (index, lenIndex) => {
+
+    // document.getElementById("placeOrderbtn").style.visibility="hidden"
     if (props.location.query.quantity[index]===0){
       document.getElementById("addbutton " + index).style.visibility = "visible";
       document.getElementById("count " + index).style.visibility = "hidden";
@@ -175,7 +177,6 @@ function ServiceList(props) {
       if (props.location.query.quantity[index]===0){
         document.getElementById("addbutton " + index).style.visibility = "visible";
         document.getElementById("count " + index).style.visibility = "hidden";
-        // document.getElementById("placeOrderbtn").style.visibility="hidden";
 
 
       }
@@ -192,6 +193,11 @@ function ServiceList(props) {
     }
     document.getElementById("CartAmount").innerText =Tot_amount;
     document.getElementById("CartCount").innerText = count;
+
+    if (eval(document.getElementById("CartAmount").innerText)===0){
+        document.getElementById("placeOrderbtn").style.visibility="hidden";
+
+    }
   }
 
   function viewCount(index) {

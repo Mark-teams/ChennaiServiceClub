@@ -89,7 +89,7 @@ handleTimeFromChange=(event)=>{
 handleSubmit= event=>{
 event.preventDefault();
 var optedService='\n';
-
+if (eval(document.getElementById("CartAmount").innerHTML)>0){
 for (var index=0; index<this.props.location.query.Servicelist.length;index++){
   // console.log(this.props.location.query.Servicelist[index])
   if (eval(document.getElementById(index).innerHTML)>0){
@@ -132,6 +132,7 @@ document.getElementById("PopupWindow").innerHTML=`<svg class="checkmark" xmlns="
 <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
 <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
 </svg><h2 align="center">Thanks for your response.<br/> Our team members we call you shortly</h2>`
+}
 
 }
 
