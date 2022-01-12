@@ -1,28 +1,28 @@
 {
   "files": {
     "main.css": "/ChennaiServiceClub/static/css/main.4250111f.chunk.css",
-    "main.js": "/ChennaiServiceClub/static/js/main.3caeccbc.chunk.js",
-    "main.js.map": "/ChennaiServiceClub/static/js/main.3caeccbc.chunk.js.map",
-    "runtime-main.js": "/ChennaiServiceClub/static/js/runtime-main.a6934451.js",
-    "runtime-main.js.map": "/ChennaiServiceClub/static/js/runtime-main.a6934451.js.map",
+    "main.js": "/ChennaiServiceClub/static/js/main.fd58745c.chunk.js",
+    "main.js.map": "/ChennaiServiceClub/static/js/main.fd58745c.chunk.js.map",
+    "runtime-main.js": "/ChennaiServiceClub/static/js/runtime-main.9953b56f.js",
+    "runtime-main.js.map": "/ChennaiServiceClub/static/js/runtime-main.9953b56f.js.map",
     "static/css/2.95241aa6.chunk.css": "/ChennaiServiceClub/static/css/2.95241aa6.chunk.css",
-    "static/js/2.3b145ee1.chunk.js": "/ChennaiServiceClub/static/js/2.3b145ee1.chunk.js",
-    "static/js/2.3b145ee1.chunk.js.map": "/ChennaiServiceClub/static/js/2.3b145ee1.chunk.js.map",
-    "static/js/3.0cf8a914.chunk.js": "/ChennaiServiceClub/static/js/3.0cf8a914.chunk.js",
-    "static/js/3.0cf8a914.chunk.js.map": "/ChennaiServiceClub/static/js/3.0cf8a914.chunk.js.map",
+    "static/js/2.3f85b1d2.chunk.js": "/ChennaiServiceClub/static/js/2.3f85b1d2.chunk.js",
+    "static/js/2.3f85b1d2.chunk.js.map": "/ChennaiServiceClub/static/js/2.3f85b1d2.chunk.js.map",
+    "static/js/3.ed552b2f.chunk.js": "/ChennaiServiceClub/static/js/3.ed552b2f.chunk.js",
+    "static/js/3.ed552b2f.chunk.js.map": "/ChennaiServiceClub/static/js/3.ed552b2f.chunk.js.map",
     "index.html": "/ChennaiServiceClub/index.html",
     "static/css/2.95241aa6.chunk.css.map": "/ChennaiServiceClub/static/css/2.95241aa6.chunk.css.map",
     "static/css/main.4250111f.chunk.css.map": "/ChennaiServiceClub/static/css/main.4250111f.chunk.css.map",
-    "static/js/2.3b145ee1.chunk.js.LICENSE.txt": "/ChennaiServiceClub/static/js/2.3b145ee1.chunk.js.LICENSE.txt",
+    "static/js/2.3f85b1d2.chunk.js.LICENSE.txt": "/ChennaiServiceClub/static/js/2.3f85b1d2.chunk.js.LICENSE.txt",
     "static/media/farming.33012175.png": "/ChennaiServiceClub/static/media/farming.33012175.png",
     "static/media/landing-page.7fe0b95b.jpg": "/ChennaiServiceClub/static/media/landing-page.7fe0b95b.jpg",
     "static/media/logo.2edcbdc9.png": "/ChennaiServiceClub/static/media/logo.2edcbdc9.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.a6934451.js",
+    "static/js/runtime-main.9953b56f.js",
     "static/css/2.95241aa6.chunk.css",
-    "static/js/2.3b145ee1.chunk.js",
+    "static/js/2.3f85b1d2.chunk.js",
     "static/css/main.4250111f.chunk.css",
-    "static/js/main.3caeccbc.chunk.js"
+    "static/js/main.fd58745c.chunk.js"
   ]
 }
