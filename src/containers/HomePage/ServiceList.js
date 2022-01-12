@@ -175,7 +175,7 @@ function ServiceList(props) {
       if (props.location.query.quantity[index]===0){
         document.getElementById("addbutton " + index).style.visibility = "visible";
         document.getElementById("count " + index).style.visibility = "hidden";
-        document.getElementById("placeOrderbtn").style.visibility="hidden";
+        // document.getElementById("placeOrderbtn").style.visibility="hidden";
 
 
       }

@@ -69,7 +69,7 @@ const StandoutImage = styled.div`
   width: 38vw;
   height: 83vh;
   position: relative;
-top:30vh;
+top:15vh;
   img {
     width: 70%;
     height: 70%;
@@ -84,13 +84,12 @@ const LogoContainer = styled.div`
   align-items: flex-start;
   flex-direction: column;
   padding-left: 3vw;
- 
-  
   @media screen and (max-width: ${deviceSize.mobile}px) {
     align-items: center;
     // position: fixed;
     top: 12vh;
   }
+
 `;
 
 const SloganText = styled.h3`
