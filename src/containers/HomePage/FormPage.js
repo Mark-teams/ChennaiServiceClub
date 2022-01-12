@@ -171,7 +171,7 @@ handleDateChange(Date) {
           <b >Name</b>
           <p><input placeholder="Name" id="username" value={this.state.username} onChange={this.handleUsernameChange} className="input" required></input></p>
           <b>Phone</b>
-          <p><input className="input" name="phone"  type="number"  value={this.state.phonenumber} onChange={this.handlePhonenumberChange}
+          <p><input className="input" name="phone"  type="tel"  pattern="[0-9]{10}" value={this.state.phonenumber} onChange={this.handlePhonenumberChange}
             defaultCountry="IN"
             placeholder="Enter phone number" visiblility="hidden" required></input>
           </p>
