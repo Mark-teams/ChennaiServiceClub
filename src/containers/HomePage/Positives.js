@@ -30,7 +30,7 @@ text-align: -webkit-center;
 
 
 const positive = [{
-    "icon":"₹.199",
+    "icon":"₹.249",
     "title": "Lowest Inspection Charges",
     "description": "If you availed the Services no need to pay the inspection charges, just need to pay the service charges. However in case if you are not availing the services need to pay the 199 inspection charges. Book us."
 },
