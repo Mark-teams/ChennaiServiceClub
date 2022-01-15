@@ -6,7 +6,7 @@ import disableScroll from 'disable-scroll';
 
 
 function trigger(props){
-    console.log("trigger closed");
+    // console.log("trigger closed");
     disableScroll.off()
     props.setTrigger(false);
     // document.getElementById("placeOrderbtn").style.visibility="visible";
@@ -14,7 +14,7 @@ function trigger(props){
 }
 
 function Popup(props){
-    console.log("close ",props.trigger);
+    // console.log("close ",props.trigger);
     return (props.trigger)?(
     <div className="popup">
         <div className="popup-inner">

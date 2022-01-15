@@ -43,7 +43,7 @@ constructor(props){
 }
 
 getPickerValue = value => {
-  console.log(value);
+  // console.log(value);
 };
 
 handleUsernameChange=(event)=>{
@@ -117,15 +117,15 @@ else{
 }
 }
 
-console.log("Pros",this.props.location.query)
+// console.log("Pros",this.props.location.query)
 optedService=optedService+"*Total Amount* :"+document.getElementById("CartAmount").innerHTML
 var message=`\t*ChennaiServiceClub*\n*Category*:${this.props.location.query.title}\n${optedService} \n\n*Name*: ${this.state.username}, \n*PhoneNumber* : ${this.state.phonenumber}, \n*Address* :${this.state.address}, \n*Time* : ${timestr},\n*Date* : ${document.getElementById('DatePicker').value}`
 const msg = {message:message};
-console.log(msg)
+// console.log(msg)
 
 postData('https://messagesenderdev.herokuapp.com/sendmessage', msg)
   .then(data => {
-    console.log(data); // JSON data parsed by `data.json()` call
+    // console.log(data); // JSON data parsed by `data.json()` call
   });
 
 document.getElementById("PopupWindow").innerHTML=`<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
@@ -139,11 +139,11 @@ document.getElementById("PopupWindow").innerHTML=`<svg class="checkmark" xmlns="
 
 
 handleTimeChange(time) {
-  console.log(time);     // <- prints "3600" if "01:00" is picked
+  // console.log(time);     // <- prints "3600" if "01:00" is picked
   this.setState({ time });
 }
 handleDateChange(Date) {
-  console.log("Date",Date);     // <- prints "3600" if "01:00" is picked
+  // console.log("Date",Date);     // <- prints "3600" if "01:00" is picked
   this.setState({ Date });
 }
 

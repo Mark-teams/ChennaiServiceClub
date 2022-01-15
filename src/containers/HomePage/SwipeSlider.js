@@ -19,7 +19,7 @@ const data=[
 {
   "id":"1",
   "username":"Andrews",
-  "testimonial":"Service Tigers do AC service professionally. I appreciate their education of clients. My AC issue was resolved quickly. The price was very reasonable. I was charged 40% less than my usual budget. This is a great service.",
+  "testimonial":"ChennaiServiceClub do AC service professionally. I appreciate their education of clients. My AC issue was resolved quickly. The price was very reasonable. I was charged 40% less than my usual budget. This is a great service.",
   "profilepic":"images.png"
 },{
   "id":"2",
@@ -50,8 +50,8 @@ export function SwipeSlider() {
     
    <Swiper slidesPerView={window.innerWidth>600 ? 3 : 1}
     spaceBetween={8}
-    onSlideChange={()=> console.log('slide change')}
-    onSwiper ={swiper =>console.log(swiper)} 
+    // onSlideChange={()=> console.log('')}
+    // onSwiper ={swiper =>console.log(swiper)} 
     navigation
     pagination={{ clickable: true }}
     // scrollbar={{ draggable: true }} 

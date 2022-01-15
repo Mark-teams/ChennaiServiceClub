@@ -176,7 +176,7 @@ const AnimatedSwitch = withRouter(({ location }) => (
 
 window.onbeforeunload = function() { 
   window.setTimeout(function () { 
-    window.location.pathname = '/ChennaiServiceClub'
+    window.location.pathname = '/'
   }, 0); 
   window.onbeforeunload = null; // necessary to prevent infinite loop, that kills your browser 
 }

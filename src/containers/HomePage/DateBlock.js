@@ -8,7 +8,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 export default function DatePickerBlock() {
   const [startDate, setStartDate] = useState(new Date());
-  console.log(startDate);
+  // console.log(startDate);
   return (
     <DatePicker className='DatePicker' id='DatePicker' selected={startDate} onChange={(date) => setStartDate(date)}  />
   );

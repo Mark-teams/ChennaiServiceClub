@@ -9,10 +9,6 @@ import { deviceSize } from "../../components/responsive";
 import { IoMdCall } from "react-icons/io";
 import ParticleAnimation from 'react-particle-animation'
 
-// import Particle from "react-particles-js";
-// import particlesConfig from "./particlesConfig.json";
-
-
 import TopSectionBackgroundImg from "../../images/landing-page.jpg";
 import TheBestSpecialistsImg from "../../images/farming.png";
 

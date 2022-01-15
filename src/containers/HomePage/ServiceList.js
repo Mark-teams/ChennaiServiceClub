@@ -113,7 +113,7 @@ const SendToForm = withRouter(({ location }) => (
   <TransitionGroup>
     <CSSTransition key={location.key} >
       <Switch location={location}>
-        {console.log("servList", { location })}
+        {/* {console.log("servList", { location })} */}
         <Route><FormPage /></Route>
       </Switch>
     </CSSTransition>
