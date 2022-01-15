@@ -80,7 +80,6 @@ const ServiceThumbnail = styled.div`
 
 
 
-
 // const ViewMoreButton = styled(Button)`
 //   background-color: #f2f2f2;
 //   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
@@ -94,6 +93,7 @@ const ServiceThumbnail = styled.div`
 // `;s
 
 // const wait = (num) => new Promise((rs) => setTimeout(rs, num));
+
 
 export function Services(props) {
   let user = [{
@@ -156,23 +156,9 @@ export function Services(props) {
   ]
 
 const myRef = useRef(null)
-function executeScroll(){
-  //  myRef.current.scrollIntoView();
 
-  window.scrollTo(0,1400);
-}
-const AnimatedSwitch = withRouter(({ location }) => (
 
-  
-  <TransitionGroup>
-    <CSSTransition ref={myRef}  key={location.key} >
-      <Switch location={location}>
-      <Route exact path="/services" onLoad={executeScroll()}><ServiceList />
-</Route>
-      </Switch>
-    </CSSTransition>
-  </TransitionGroup>
-));
+
 
 window.onbeforeunload = function() { 
   window.setTimeout(function () { 
@@ -180,6 +166,34 @@ window.onbeforeunload = function() {
   }, 0); 
   window.onbeforeunload = null; // necessary to prevent infinite loop, that kills your browser 
 }
+
+function executeScroll() {
+  // console.log('serv');
+  // window.scrollTo(0,)
+  try{
+    document.getElementById('serv').scrollIntoView({
+      behavior: 'smooth', // gives an ease-in-out effect to our scroll
+    });
+  }
+
+catch{
+
+  window.scrollTo(0,1400)
+}
+}
+
+const AnimatedSwitch = withRouter(({ location }) => (
+
+  
+  <TransitionGroup>
+    <CSSTransition ref={myRef}  key={location.key} >
+      <Switch location={location}>
+      <Route exact path="/services" onLoad={executeScroll()}><ServiceList  />
+</Route>
+      </Switch>
+    </CSSTransition>
+  </TransitionGroup>
+));
   return (
     
     <ServicesContainer>
@@ -214,12 +228,12 @@ window.onbeforeunload = function() {
 The company deals with all types of air conditioning, including cassette, window, split, ducting, and central and offers installation and after-sales services.
 Our service is available throughout Chennai.Therefore, you can reach us at any location regardless of your township. <br/>ChennaiServiceClub believes living a comfortable life is essential for all people, but during the summer season, it may seem impossible to maintain a comfortable home or office unless you have a functioning air conditioner. ChennaiServiceClub is now there to help you with this issue by providing you with all kinds of air conditioners installation as per your requirements.
 Various types of AC units are on the market, including cassette ACs, ducting ACs, split ACs, window ACs, and central ACs.</p>
-
+<div id='serv'>
         <AnimatedSwitch ref={myRef}  />
         {/* </Switch>
         </CSSTransition>
         </TransitionGroup> */}
-        
+        </div>
       </Router>
           </ServicesContainer>
   );

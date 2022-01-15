@@ -49,6 +49,15 @@ padding: 1em;
   padding: 5px;
 `;
 
+function executeScroll(obj) {
+
+  obj.scrollIntoView({
+    behavior: 'smooth', // gives an ease-in-out effect to our scroll
+  });
+
+
+}
+
 function NavLink (scrollToId) 
 {  
  // window.scrollTo(0,1000);
@@ -81,7 +90,7 @@ export function HomePage(props) {
         <Marginer direction="vertical" margin="3em" />
         <div><h3 className="Title">Customer reviews</h3></div>
         <ContentContainer>      
-        <SwipeSlider />
+        <SwipeSlider id= "serviceList" />
         </ContentContainer>
         {/* <ServiceCount /> */}
          <Positives />
@@ -105,15 +114,6 @@ export function HomePage(props) {
          <li>Customer-friendly staffs</li>
          </ul>
 
-
-
-
-
-
-
-
-
-   
         </ContentContainer>
       </InnerPageContainer>
       
