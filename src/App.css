@@ -90,7 +90,8 @@ border-radius: 4px;
   border: 0px;
   width:20px;
   text-align: center;
-  padding: 6px ​6px 3px 3px;
+  margin:3px;
+  /* padding: 6px ​6px 3px 3px; */
   background-color: #f4f8f7;
   font-size: medium;
   font-weight: bold;
@@ -99,12 +100,12 @@ border-radius: 4px;
 .btn_cart{
   background: #38a785;
   text-align: center;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   border:none;
     /* border-radius: 100%; */
   display: inline-block;
-  font-size: 10px;
+  font-size: 18px;
   vertical-align:middle;
   color: white;
   font-weight: bold;
@@ -216,7 +217,7 @@ padding-bottom: 20px;
     /* text-align: -webkit-center;s */
     font-size: x-large;
     font-weight: 900;
-    text-align-last: center
+    text-align-last: center;
 }
 
   .card-title {

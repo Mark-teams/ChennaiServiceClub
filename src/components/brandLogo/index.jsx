@@ -33,17 +33,22 @@ const StyledLink = styled(Link)`
 
 export function BrandLogo(props) {
   const { logoSize, textSize, color, hideLogo } = props;
+  function refreshPage() {
+    setTimeout(()=>{
+        window.location.reload(false);
+    }, 500);
+}
 
   return (
     <BrandLogoContainer>
       {!hideLogo && (
-        <Link to="/">
+        <Link onClick={refreshPage}>
           <LogoImage size={logoSize}>
             <img src={LogoImg} alt="Chennai-Service-Club logo" />
           </LogoImage>
         </Link>
       )}
-      <StyledLink to="/">
+      <StyledLink onClick={refreshPage}>
         <LogoTitle size={textSize} color={color}>
           ChennaiServiceClub
         </LogoTitle>

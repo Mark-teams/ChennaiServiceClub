@@ -168,8 +168,7 @@ window.onbeforeunload = function() {
 }
 
 function executeScroll() {
-  // console.log('serv');
-  // window.scrollTo(0,)
+  
   try{
     document.getElementById('serv').scrollIntoView({
       behavior: 'smooth', // gives an ease-in-out effect to our scroll
@@ -195,6 +194,7 @@ const AnimatedSwitch = withRouter(({ location }) => (
   </TransitionGroup>
 ));
   return (
+    
     
     <ServicesContainer>
       

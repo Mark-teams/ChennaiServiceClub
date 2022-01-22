@@ -27,7 +27,7 @@ import "./../../components/specialistAd/Feedback.css"
 
 const ContentContainer = styled.div`
   width: 100%;
-  max-width: ${deviceSize.laptop}px;
+  max-width:100vw ;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -49,14 +49,7 @@ padding: 1em;
   padding: 5px;
 `;
 
-function executeScroll(obj) {
 
-  obj.scrollIntoView({
-    behavior: 'smooth', // gives an ease-in-out effect to our scroll
-  });
-
-
-}
 
 function NavLink (scrollToId) 
 {  
@@ -99,7 +92,7 @@ export function HomePage(props) {
         <ContentContainer>      
         <p className="text positiveCardsubtitle"><span className="tab">   </span>We at ChennaiServiceClub offer the full range of AC installation services through 
         professionals so that you can enjoy the benefits of choosing the right AC service provider.
-              ChennaiServiceClub's service engineers are well-trained and always available to provide you with the most satisfactory service.
+        ChennaiServiceClub's service engineers are well-trained and always available to provide you with the most satisfactory service.
               The services are available for an affordable price.
           </p>
           <div><h3 className="Title">Process we follow for AC Service</h3></div>

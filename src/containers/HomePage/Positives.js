@@ -11,28 +11,29 @@ background:white;
   width:150wv;
 `;
 const PositiveCardIcon= styled.div`
-height: 120px;
-    width: 120px;
+height: 90px;
+    width: 90px;
     border: 4px solid darkslategray;
     display: table-cell;
     text-align: center;
     color: darkslategray;
     vertical-align: middle;
     border-radius: 50%;
-    font-size: 27px;
+    font-size: 20px;
     position: relative;
     text-align: -webkit-center;
     font-family:bold;
 `
 const PositiveCardHolder=styled.div`
 text-align: -webkit-center;
+padding-bottom: 10px;
 `
 
 
 const positive = [{
     "icon":"₹.249",
     "title": "Lowest Inspection Charges",
-    "description": "If you availed the Services no need to pay the inspection charges, just need to pay the service charges. However in case if you are not availing the services need to pay the 199 inspection charges. Book us."
+    "description": "If you availed the Services no need to pay the inspection charges, just need to pay the service charges. However in case if you are not availing the services need to pay the ₹249 inspection charges. Book us."
 },
 {   "icon":"30 Days",
     "title": "Service Warranty",
@@ -59,8 +60,9 @@ export default function ServiceCount() {
                                           {e.icon}
                                           </PositiveCardIcon>
                                          </PositiveCardHolder> 
-                                      <div className="positiveCardtitle" tag="h5">{e.title}</div>
-                                      <div className="positiveCardsubtitle" tag="h6" >{e.description}</div>
+                                      <div className="positiveCardtitle" tag="h4">{e.title}</div>
+                                      <div className="text" tag="h6" >{e.description}</div>
+                                      {/* positiveCardsubtitle */}
                                   </div>
                               </Card>
                           </Col>

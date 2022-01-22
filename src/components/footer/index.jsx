@@ -11,6 +11,7 @@ const FooterContainer = styled.div`
   width: 100%;
   min-height: 300px;
   display: flex;
+  background:#264653;
   flex-direction: column;
   justify-content: space-between;
   padding: 2em 3em;
@@ -62,14 +63,14 @@ const LeftBottomContainer = styled.div`
 const Title = styled.h2`
   margin: 0;
   margin-bottom: 13px;
-  color: darkslategray;
+  color: #fed;
   font-weight: 600;
   font-size: 20px;
 `;
 
 const FLink = styled.a`
   text-decoration: none;
-  color: #6f6f6f;
+  color: #9f9f9f;
   font-weight: 500;
   font-size: 15px;
   cursor: pointer;
@@ -130,7 +131,7 @@ export function Footer(props) {
           <FLink>Relocation</FLink>
         </ContentContainer>
         <ContentContainer>
-          <Title >locations</Title>
+          <Title >Locations</Title>
           <FLink>Chennai</FLink>
           <FLink></FLink>
           <FLink></FLink>
@@ -139,7 +140,7 @@ export function Footer(props) {
       </TopContainer>
       <BottomContainer>
         <LeftBottomContainer>
-          <BrandLogo hideLogo color="#8A8A8A" textSize={isMobile ? 20 : 25} />
+          <BrandLogo hideLogo color="#8f8f8f" textSize={isMobile ? 20 : 25} />
           <PrivacyText> &#169; All Rights Reserved. 2021</PrivacyText>
         </LeftBottomContainer>
         <RightBottomContainer>

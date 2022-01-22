@@ -112,23 +112,25 @@ background:rgb(238, 241, 239);
 border-radius: 20px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+
 .swiper-container{
-width: 75wh;
+width: 300px;
 align-self: center;
-height: 317px;
-/* padding:20px; */
+height: 350px;
+padding:12px;
 background: space;
 
 }
 
 .swiper-slide .slider{
-	width:400px;
+	width:300px;
 	align-self: center;
 	height:500px;
 	/* margin:20px; */
 	background: white;
-	margin-right: 10px;
-	margin-bottom: 10px;
+	/* margin-right: 10px;
+	margin-bottom: 10px; */
 	
 }
 
@@ -140,7 +142,7 @@ background: space;
 }
 .mySwiper{
 	width:100%;
-	height:490px;
+	height:40vh;
 	margin-bottom: 20px;
 	background-color: white;
 	z-index: 1;
@@ -149,12 +151,8 @@ background: space;
 	width:200px;
 	height:200px;
 }
-.slide-content{
-	text-align: center;
-	height:450px;
-	/* border: 1px double; */
-	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.18), 0 8px 22px 0 rgba(0, 0, 0, 0.19);
-}
+
+
 .slide-content img{
 	width: 200px;
     height: 200px;
@@ -231,18 +229,19 @@ background: space;
 	  height:100%;
   }
   .user-testimonial{
-	  padding: 8px;
+	  padding: 0rem 1rem 1rem 1rem;
 	  text-align:center;
 	  color: gray;
     font-size: medium;
     font-family: system-ui;
+	font-size: smaller;
 	}
 
 .positiveContainer {
 		top: 10%;
 		left: 23%;
 		width: 100%;
-	padding: 30px 20px 20px 20px;
+	/* padding: 30px 20px 20px 20px; */
 	
 }
 
@@ -250,18 +249,13 @@ background: space;
 	background: white;
 	
 }
-.positiveCardtitle{
-	font-size: 30px;
-	font-weight: 600;
-	text-align: center;
-	color:darkslategray;
-}
+
 .positiverow {
     width: fit-content;
 }
 
 .positiveCardsubtitle{
-	font-size: 20px;
+	font-size: large;
 	color:darkslategray;
 }
 
@@ -282,10 +276,28 @@ background: space;
 	padding-right:40px;
   }
   
-  @media screen and (max-width:500px) { 
+  @media screen and (max-width:600px) { 
+	.slide-content{
+		text-align: center;
+		height:55vh;
+		
+		/* width:91vw; */
+		border-radius: 20px;
+		/* border: 1px double; */
+		box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.18), 0px 8px 10px 0px rgba(0, 0, 0, 0.19);
+	}
+
+	.positiveCardtitle{
+		font-size:  large;
+		margin:0px;
+		padding-bottom: 10px;
+		font-weight: 600;
+		text-align: center;
+		color:darkslategray;
+	}
 	.mySwiper{
 		width:100%;
-		height:500px;
+		height:60vh;
 		
 	}
 	.row{
@@ -307,20 +319,40 @@ background: space;
     background-color: #fff;
     background-clip: border-box;
     border-radius: 0.25rem;
-	margin: 30px;
+	margin: 15px;
 
 	border: 0px solid rgba(0, 0, 0, 0);
 }
 
 	
 }
-@media (min-width: 1200px){
+
+
+@media screen and (min-width: 600px){
+	.slide-content{
+		text-align: center;
+		height:50vh;
+		width:45vw;
+		border-radius: 20px;
+		/* border: 1px double; */
+		box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.18), 0 8px 22px 0 rgba(0, 0, 0, 0.19);}
+
 	h3 {
 		font-size: 1.75rem;
 	}
-	}
+	.positiveCardtitle{
+		padding: 15px 0px 15px 0px;
+		font-size:  x-large;
+		font-weight: 600;
+		text-align: center;
+		color:darkslategray;
+	}	
+
+}
 
 	
+
+
 .FloatBtn{
 	position:fixed;
 	bottom:20px;
