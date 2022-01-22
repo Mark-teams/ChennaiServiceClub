@@ -331,8 +331,8 @@ background: space;
 @media screen and (min-width: 600px){
 	.slide-content{
 		text-align: center;
-		height:50vh;
-		width:45vw;
+		height:64vh;
+		width:28vw;
 		border-radius: 20px;
 		/* border: 1px double; */
 		box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.18), 0 8px 22px 0 rgba(0, 0, 0, 0.19);}
