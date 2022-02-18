@@ -134,9 +134,7 @@ export function TopSection(props) {
 
           <LogoContainer>
             <Marginer direction="vertical" margin={8} />
-            <SloganText>No.1 AirConditioner Service Team</SloganText>
-            <SloganText>in Chennai</SloganText>
-            
+            <SloganText>No.1 AC Repair and Service Team in Chennai</SloganText>
             <Marginer direction="vertical" margin={20} />
             <Button ><ButtonText href="tel:+91-8925672761"><IoMdCall style={{"vertical-align": "text-bottom"}} size='1.3em'/> {8925672761}</ButtonText></Button>
             

@@ -95,9 +95,9 @@ export function HomePage(props) {
         ChennaiServiceClub's service engineers are well-trained and always available to provide you with the most satisfactory service.
               The services are available for an affordable price.
           </p>
-          <div><h3 className="Title">Process we follow for AC Service</h3></div>
+          <div><h3 className="Title">How to book AC Service in Chennai through Chennai Service Club?</h3></div>
                 <ul className="text positiveCardsubtitle" style={{"text-align": "left"}}>
-         <li>Choose an AC repair service from our <a href='' onClick={() => NavLink("list-of-services")}><u style={{"color":"blue","cursor":"pointer"}}>list of services.</u></a></li>
+         <li>Choose an AC repair service from our <b onClick={() => NavLink("list-of-services")}><u style={{"color":"blue","cursor":"pointer"}}>list of services.</u></b></li>
          <li>Choose a time slot - Our AC service center is available all days of the week.</li>
          <li>Easy service - our expert AC technician completes service within one hour after ordering.</li>
          <li>Ensure the AC repair work is handled by a trained and expert service technician</li>

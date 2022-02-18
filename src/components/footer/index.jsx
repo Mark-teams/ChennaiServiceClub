@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import { BrandLogo } from "../brandLogo";
 
-import { faFacebook, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { deviceSize } from "../responsive";
 import { useMediaQuery } from "react-responsive";
 
@@ -68,7 +68,19 @@ const Title = styled.h2`
   font-size: 20px;
 `;
 
-const FLink = styled.a`
+const FLink = styled.b`
+  text-decoration: none;
+  color: #9f9f9f;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+
+  &:not(:last-of-type) {
+    margin-bottom: 8px;
+  }
+`;
+
+const FLinkk = styled.a`
   text-decoration: none;
   color: #9f9f9f;
   font-weight: 500;
@@ -133,22 +145,23 @@ export function Footer(props) {
         <ContentContainer>
           <Title >Locations</Title>
           <FLink>Chennai</FLink>
-          <FLink></FLink>
-          <FLink></FLink>
-          <FLink></FLink>
         </ContentContainer>
       </TopContainer>
       <BottomContainer>
         <LeftBottomContainer>
           <BrandLogo hideLogo color="#8f8f8f" textSize={isMobile ? 20 : 25} />
-          <PrivacyText> &#169; All Rights Reserved. 2021</PrivacyText>
+          <PrivacyText> &#169; All Rights Reserved. 2022</PrivacyText>
         </LeftBottomContainer>
         <RightBottomContainer>
           <SocialIcon>
+          <FLinkk rel="noreferrer" href="https://facebook.com/Chennnai-Service-Club-111049714810936/?ref=bookmarks" target="_blank">
             <FontAwesomeIcon icon={faFacebook} />
+          </FLinkk>
           </SocialIcon>
           <SocialIcon>
-            <FontAwesomeIcon icon={faTwitter} />
+          <FLinkk rel="noreferrer" href=" https://www.instagram.com/p/CZtyAGVPi4B/?utm_medium=share_sheet" target="_blank">
+            <FontAwesomeIcon icon={faInstagram} />
+           </FLinkk> 
           </SocialIcon>
           {/* <SocialIcon>
           <PrivacyText>developed by Mark96Solutions.com</PrivacyText>
