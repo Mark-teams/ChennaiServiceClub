@@ -123,11 +123,25 @@ var message=`\t*ChennaiServiceClub*\n*Category*:${this.props.location.query.titl
 const msg = {message:message};
 // console.log(msg)
 
-postData('https://messagesenderdev.herokuapp.com/sendmessage', msg)
-  .then(data => {
-   
-    // console.log(data); // JSON data parsed by `data.json()` call
-  });
+postData('https://messagesenderdev.herokuapp.com/SendVonage', msg)
+.then(data => {
+console.log(data); // JSON data parsed by `data.json()` call
+if(data['status']===200){
+document.getElementById("PopupWindow").innerHTML=`<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+<circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+<path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+</svg><h2 align="center">Thanks for your response.<br/> Our team members we call you shortly</h2>`
+}
+else{
+document.getElementById("PopupWindow").innerHTML=`<svg class="checkmarkError" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+<circle class="checkmark__circleError" stroke="#FF0000" cx="26" cy="26" r="25" fillError="none" />
+<path class="checkmark__check" fill="none" d="M16 16 36 36 M36 16 16 36" />
+</svg><h2 align="center">Sorry for the Inconvinience.<br/>Server is under maintenance.</h2>
+`
+}
+
+
+});
 
 document.getElementById("PopupWindow").innerHTML=`<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
 <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
