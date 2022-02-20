@@ -205,8 +205,7 @@ const AnimatedSwitch = withRouter(({ location }) => (
       </span>
       The No.1 AC Servicing Company in Chennai. We have 90+ Service Centers in Chennai.
       We have more than Ten Thousand clients in Chennai. Our Services will be low cost in city, 
-      however quality will be similar to that of international quality.<h4>We offer a wide range of air conditioning services in Chennai. Book AC repair, AC service, AC installation & more with just a few clicks. Book now!
-
+      however quality will be similar to that of international quality.<h4>We offer a wide range of AC services in Chennai. Book AC repair, AC service, AC installation, Ac water leak issue & more with just a few clicks. Book now!
 </h4>
 </p>
 <Router>
