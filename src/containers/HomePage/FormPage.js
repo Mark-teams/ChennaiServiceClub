@@ -67,25 +67,6 @@ handleTimeFromChange=(event)=>{
   })
 }
 
-// fetchServer = ({ number, text }) => {
-//   console.log('send');
-//   fetch('/', {
-//     method: 'post',
-//     headers: {
-//       'Content-type': 'application/json'
-//     },
-//     body: JSON.stringify({ number, text })
-//   })
-//     .then(function (res) {
-//       console.log(" Response ",res);
-//     })
-//     .catch(function (err) {
-//       console.log("Error ",err);
-//     });
-// };
-
-
-
 handleSubmit= event=>{
 event.preventDefault();
 var optedService='\n';
@@ -125,7 +106,7 @@ const msg = {message:message};
 
 postData('https://messagesenderdev.herokuapp.com/SendVonage', msg)
 .then(data => {
-console.log(data); // JSON data parsed by `data.json()` call
+// console.log(data); // JSON data parsed by `data.json()` call
 if(data['status']===200){
 document.getElementById("PopupWindow").innerHTML=`<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
 <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
@@ -139,19 +120,10 @@ document.getElementById("PopupWindow").innerHTML=`<svg class="checkmarkError" xm
 </svg><h2 align="center">Sorry for the Inconvinience.<br/>Server is under maintenance.</h2>
 `
 }
-
-
 });
-
-document.getElementById("PopupWindow").innerHTML=`<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-<circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
-<path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
-</svg><h2 align="center">Thanks for your response.<br/> Our team members we call you shortly</h2>`
 }
 
 }
-
-
 
 handleTimeChange(time) {
   // console.log(time);     // <- prints "3600" if "01:00" is picked
