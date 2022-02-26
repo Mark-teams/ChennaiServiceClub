@@ -102,7 +102,7 @@ else{
 optedService=optedService+"Total Amount :"+document.getElementById("CartAmount").innerHTML
 var message=`Category:${this.props.location.query.title}${optedService}\nName: ${this.state.username}, Phone: ${this.state.phonenumber} ,Address :${this.state.address}, Time : ${timestr}, Date: ${document.getElementById('DatePicker').value}`
 const msg = {message:message};
-console.log(msg)
+// console.log(msg)
 
 postData('https://messagesenderdev.herokuapp.com/SendVonage', msg)
 .then(data => {
