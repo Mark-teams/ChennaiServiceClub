@@ -13,6 +13,8 @@ function App() {
       <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route exact path="/"  component={HomePage} />
+          <Route exact path="/services"  component={HomePage} />
+          <Route exact path="/categories"  component={HomePage} />
           <Route
             path="/customer/access/:action"
             exact
