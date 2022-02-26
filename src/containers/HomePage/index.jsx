@@ -12,10 +12,8 @@ import { deviceSize } from "../../components/responsive";
 import { SwipeSlider } from "./SwipeSlider";
 import { Services } from "./services";
 import { TopSection } from "./topSection";
-
+import './tagStyles.css';
 import Positives from './Positives';
-
-
 
 // import Fab from '@material-ui/core/Fab'
 
@@ -106,9 +104,21 @@ export function HomePage(props) {
          <li>Reasonable rates and discounts</li>
          <li>Customer-friendly staffs</li>
          </ul>
+         <h2 className="Title">We offer Ac Service and Repair for below brands in Chennai</h2>
 
-        </ContentContainer>
-      </InnerPageContainer>
+<div class="container">
+  <h4 class="tag item ">Blue Star Ac service in Chennai</h4>
+ <h4 class="tag item ">Panasonic ac service center in chennai</h4>
+ <h4 class="tag item ">Daikin ac service in chennai</h4>
+ <h4 class="tag item ">Lg ac service in chennai</h4>
+ <h4 class="tag item ">Voltas ac service in chennai</h4>
+  <h4 class="tag item ">Whirlpool ac service center in chennai</h4>
+  <h4 class="tag item ">Haier service centre chennai</h4>
+  <h4 class="tag item ">Hitachi ac service chennai</h4>
+  <h4 class="tag item ">Onida ac service chennai</h4>
+</div>
+</ContentContainer>
+    </InnerPageContainer>
       
       <Footer />
       

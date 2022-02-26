@@ -5,9 +5,6 @@ import { BrowserRouter as Router,Link, Route, Switch,withRouter } from 'react-ro
 import { deviceSize } from "../../components/responsive";
 import ServiceList from "./ServiceList";
 import { AiOutlineArrowRight } from 'react-icons/ai';
-
-
-
 import {TransitionGroup, CSSTransition } from "react-transition-group";
 // import data from './db.json'
 // console.log(data.map())
@@ -76,10 +73,6 @@ const ServiceThumbnail = styled.div`
     height: 100%;
   }
 `;
-
-
-
-
 // const ViewMoreButton = styled(Button)`
 //   background-color: #f2f2f2;
 //   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
@@ -203,15 +196,13 @@ const AnimatedSwitch = withRouter(({ location }) => (
       <p className="text positiveCardsubtitle">
       <span className="tab"> 
       </span>
-      The No.1 AC Servicing Company in Chennai. We have 90+ Service Centers in Chennai.
-      We have more than Ten Thousand clients in Chennai. Our Services will be low cost in city, 
-      however quality will be similar to that of international quality.<h4>We offer a wide range of AC services in Chennai. Book AC repair, AC service, AC installation, Ac water leak issue & more with just a few clicks. Book now!
+      The No.1 AC Service Company in Chennai. We have 90+ Service Centers in Chennai.
+      We have more than Ten Thousand clients in Chennai. Our Services will be low cost in Chennai, 
+      however quality will be similar to that of international quality.<h4>We offer a wide range of AC service in Chennai. Book AC repair, AC service, AC installation, Ac water leak issue & more with just a few clicks. Book now!
 </h4>
 </p>
 <Router>
-
-      
-        <ServicesWrapper>
+     <ServicesWrapper>
           {
 
             user.map((item) => <Link style={{ textDecoration: 'none' }} to={{ pathname: `/services`, query: { specialist: item.specialist,title:item.title, services: item.services, amount: item.price,quantity:item.quantity,serviceIcon:item.serviceIcon } }} ><CardContainer >
@@ -231,11 +222,11 @@ const AnimatedSwitch = withRouter(({ location }) => (
         {/* <TransitionGroup>
         <CSSTransition className="list" timeout={1000}>
         <Switch> */}
-        <p className="text positiveCardsubtitle"><span className="tab">   </span>Among the many ac service providers in Chennai, ChennaiServiceClub is one of the most prominent.
+              <h1 className="Title">Ac Service in Chennai</h1>
+        <p className="text positiveCardsubtitle">Among the many ac service providers in Chennai, ChennaiServiceClub is one of the most prominent.
 The company deals with all types of air conditioning, including cassette, window, split, ducting, and central and offers installation and after-sales services.
 Our service is available throughout Chennai.Therefore, you can reach us at any location regardless of your township. <br/>ChennaiServiceClub believes living a comfortable life is essential for all people, but during the summer season, it may seem impossible to maintain a comfortable home or office unless you have a functioning air conditioner. ChennaiServiceClub is now there to help you with this issue by providing you with all kinds of air conditioners installation as per your requirements.
 Various types of AC units are on the market, including cassette ACs, ducting ACs, split ACs, window ACs, and central ACs.</p>
-<h4></h4>
 <div id='serv'>
         <AnimatedSwitch ref={myRef}  />
         {/* </Switch>

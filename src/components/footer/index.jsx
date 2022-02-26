@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import { BrandLogo } from "../brandLogo";
 
-import { faFacebook, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { deviceSize } from "../responsive";
 import { useMediaQuery } from "react-responsive";
 
@@ -134,7 +134,7 @@ export function Footer(props) {
         <ContentContainer>
           <Title>Services</Title>
           <FLink>General Service</FLink>
-          <FLink>Deep Cleanig Service</FLink>
+          <FLink>Deep Cleaning Service</FLink>
           <FLink>Foam Wash Service</FLink>
           <FLink>AC Repair</FLink>
           <FLink>Water Leakage</FLink>
