@@ -159,7 +159,7 @@ export function Footer(props) {
           </FLinkk>
           </SocialIcon>
           <SocialIcon>
-          <FLinkk rel="noreferrer" href=" https://www.instagram.com/p/CZtyAGVPi4B/?utm_medium=share_sheet" target="_blank">
+          <FLinkk rel="noreferrer" href="https://www.instagram.com/chennaiserviceclub_official/?utm_medium=copy_link" target="_blank">
             <FontAwesomeIcon icon={faInstagram} />
            </FLinkk> 
           </SocialIcon>

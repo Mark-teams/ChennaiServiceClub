@@ -74,7 +74,7 @@ if (eval(document.getElementById("CartAmount").innerHTML)>0){
 for (var index=0; index<this.props.location.query.Servicelist.length;index++){
   // console.log(this.props.location.query.Servicelist[index])
   if (eval(document.getElementById(index).innerHTML)>0){
-  optedService+=  this.props.location.query.Servicelist[index]+' => '+document.getElementById(index).innerHTML+' => '+document.getElementById("total " + index).innerHTML+"\n"
+  optedService+=  this.props.location.query.Servicelist[index]+'('+document.getElementById(index).innerHTML+') ,' //+document.getElementById("total " + index).innerHTML+
   }
 }
 var timestr=''
@@ -99,10 +99,10 @@ else{
 }
 
 // console.log("Pros",this.props.location.query)
-optedService=optedService+"*Total Amount* :"+document.getElementById("CartAmount").innerHTML
-var message=`\t*ChennaiServiceClub*\n*Category*:${this.props.location.query.title}\n${optedService} \n\n*Name*: ${this.state.username}, \n*PhoneNumber* : ${this.state.phonenumber}, \n*Address* :${this.state.address}, \n*Time* : ${timestr},\n*Date* : ${document.getElementById('DatePicker').value}`
+optedService=optedService+"Total Amount :"+document.getElementById("CartAmount").innerHTML
+var message=`Category:${this.props.location.query.title}${optedService}\nName: ${this.state.username}, Phone: ${this.state.phonenumber} ,Address :${this.state.address}, Time : ${timestr}, Date: ${document.getElementById('DatePicker').value}`
 const msg = {message:message};
-// console.log(msg)
+console.log(msg)
 
 postData('https://messagesenderdev.herokuapp.com/SendVonage', msg)
 .then(data => {
