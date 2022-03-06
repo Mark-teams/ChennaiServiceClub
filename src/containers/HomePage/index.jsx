@@ -88,14 +88,11 @@ export function HomePage(props) {
         {/* <Marginer direction="vertical" margin="3em" /> */}
         <div><h3 className="Title">About us</h3></div>
         <ContentContainer>      
-        <p className="text positiveCardsubtitle"><span className="tab">   </span>We at ChennaiServiceClub offer the full range of AC installation services through 
-        professionals so that you can enjoy the benefits of choosing the right AC service provider.
-        ChennaiServiceClub's service engineers are well-trained and always available to provide you with the most satisfactory service.
-              The services are available for an affordable price.
+        <p className="text positiveCardsubtitle"><span className="tab">   </span>We at ChennaiServiceClub offer the full range of AC installation services through professionals so that you can enjoy the benefits of choosing the correct AC service providers in Chennai. ChennaiServiceClub's service engineers are well-trained and always available to provide you with the most satisfactory service. The services are available for an affordable price.
           </p>
           <div><h3 className="Title">How to book AC Service in Chennai through Chennai Service Club?</h3></div>
                 <ul className="text positiveCardsubtitle" style={{"text-align": "left"}}>
-         <li>Choose an AC repair service from our <b onClick={() => NavLink("list-of-services")}><u style={{"color":"blue","cursor":"pointer"}}>list of services.</u></b></li>
+         <li>Choose an AC repair service from our <b onClick={() => NavLink("list-of-services")}><u style={{"color":"blue","cursor":"pointer"}}>list of services</u></b> we provide all kind of Ac Service in Chennai</li>
          <li>Choose a time slot - Our AC service center is available all days of the week.</li>
          <li>Easy service - our expert AC technician completes service within one hour after ordering.</li>
          <li>Ensure the AC repair work is handled by a trained and expert service technician</li>

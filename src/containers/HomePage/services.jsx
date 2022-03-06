@@ -224,9 +224,7 @@ const AnimatedSwitch = withRouter(({ location }) => (
         <Switch> */}
               <h1 className="Title">Ac Service in Chennai</h1>
         <p className="text positiveCardsubtitle">Among the many ac service providers in Chennai, ChennaiServiceClub is one of the most prominent.
-The company deals with all types of air conditioning, including cassette, window, split, ducting, and central and offers installation and after-sales services.
-Our service is available throughout Chennai.Therefore, you can reach us at any location regardless of your township. <br/>ChennaiServiceClub believes living a comfortable life is essential for all people, but during the summer season, it may seem impossible to maintain a comfortable home or office unless you have a functioning air conditioner. ChennaiServiceClub is now there to help you with this issue by providing you with all kinds of air conditioners installation as per your requirements.
-Various types of AC units are on the market, including cassette ACs, ducting ACs, split ACs, window ACs, and central ACs.</p>
+The company deals with all types of Ac service in Chennai including different Ac types like a cassette, window, split, ducting, and central and offers installation and after-sales services. Our service is available throughout Chennai. Therefore, you can reach us at any location regardless of your township. <br/>ChennaiServiceClub believes living a comfortable life is essential for all people, but during the summer season, it may seem impossible to maintain a comfortable home or office unless you have a functioning air conditioner. ChennaiServiceClub is now there to help you with this issue by providing you with all kinds of air conditioners installation as per your requirements. Various types of AC units are on the market, including cassette ACs, ducting ACs, split ACs, window ACs, central AC. we provide all types of Ac service in Chennai regardless of brand. </p>
 <div id='serv'>
         <AnimatedSwitch ref={myRef}  />
         {/* </Switch>
