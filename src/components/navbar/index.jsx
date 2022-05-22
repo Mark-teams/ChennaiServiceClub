@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import { BrandLogo } from "../brandLogo";
-// import { Button } from "../button";
-// import { FaWhatsapp } from "react-icons/fa";
-// import {HiMenuAlt3} from "react-icons/hi";
-// import { Marginer } from "../marginer";
+import { Button } from "../button";
+import { FaWhatsapp } from "react-icons/fa";
+import {HiMenuAlt3} from "react-icons/hi";
+import { Marginer } from "../marginer";
 import { deviceSize } from "../responsive";
-// import { useMediaQuery } from "react-responsive";
-// import Navbarfunction from "./components/Navbar";
-// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-// import "../../App.css"
+import { useMediaQuery } from "react-responsive";
+import Navbarfunction from "./components/Navbar";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import "../../App.css"
 
 const NavbarContainer = styled.div`
   width: 100%;
@@ -61,24 +61,23 @@ const AccessibilityContainer = styled.div`
 // text-decoration: none !important;
 // color:white;`
 
-// const Menuicon=styled.i`
-// font-size:24px;
-// color:white;
-// @media screen and (max-width: ${deviceSize.mobile}px) {
-//   visibility:visible;
-// }
-// @media screen and (min-width: ${deviceSize.mobile}px) {
-//   visibility:hidden;}
-// `;
+ const Menuicon=styled.i`
+ font-size:24px;
+ color:white;
+ @media screen and (max-width: ${deviceSize.mobile}px) {
+   visibility:visible;
+ }
+ @media screen and (min-width: ${deviceSize.mobile}px) {
+   visibility:visible;}
+ `;
 
-// function Homepagebutton(pos){
-//   console.log("pros",pos);
-//   // window.scrollTo(0,pos);
-
-//   setTimeout(function () {
-//     window.scrollTo(0, pos);
-// },200);
-// }
+ function Homepagebutton(pos){
+   console.log("pros",pos);
+   window.scrollTo(0,pos);
+   setTimeout(function () {
+     window.scrollTo(0, pos);
+ },200);
+ }
 
 
 export function Navbar(props) {
@@ -105,7 +104,7 @@ export function Navbar(props) {
       </AccessibilityContainer>  
 
 
-      {/* <Menuicon className="menuItems">
+      <Menuicon className="menuItems">
 
       <Router >
         <Navbarfunction  />
@@ -115,7 +114,7 @@ export function Navbar(props) {
           <Route path='/' onClick={()=>Homepagebutton(5000)}  />
         </Switch>
       </Router>
-      </Menuicon> */}
+      </Menuicon>
     </NavbarContainer>
   );
 }

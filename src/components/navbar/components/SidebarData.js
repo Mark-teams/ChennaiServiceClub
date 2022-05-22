@@ -1,5 +1,5 @@
 import React from 'react';
-// import * as FaIcons from 'react-icons/fa';
+import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 // import * as IoIcons from 'react-icons/io';
 
@@ -9,8 +9,8 @@ export const SidebarData = [
     path: '/',
     icon: <AiIcons.AiFillHome />,
     cName: 'nav-text',
-    pos:2000
-  // },
+    pos:0
+   },
   // {
   //   title: 'Reports',
   //   path: '/reports',
@@ -18,13 +18,13 @@ export const SidebarData = [
   //   cName: 'nav-text',
   //   pos:3000
   // },
-  // {
-  //   title: 'Products',
-  //   path: '/products',
-  //   icon: <FaIcons.FaCartPlus />,
-  //   cName: 'nav-text',
-  //   pos:4000
-  // },
+   {
+     title: 'Services',
+     path: '/',
+     icon: <FaIcons.FaCartPlus />,
+     cName: 'nav-text',
+     pos:600
+   },
   // {
   //   title: 'Team',
   //   path: '/team',
@@ -45,5 +45,5 @@ export const SidebarData = [
   //   icon: <IoIcons.IoMdHelpCircle />,
   //   cName: 'nav-text',
   //   pos:7000
-  }
+  
 ];

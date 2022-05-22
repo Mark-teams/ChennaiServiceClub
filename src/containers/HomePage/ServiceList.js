@@ -69,7 +69,12 @@ position: absolute;
 margin: 24px;
 `
 
-
+const styleSpan=styled.span`
+.span{
+  color:#083644 ;
+  font-size: larger;
+  padding: 20px 0px 10px 10px;
+}`
 
 // function handleSubmit(event) {
 //   alert('A name was submitted: ' + this.state.value);
@@ -236,9 +241,9 @@ function ServiceList(props) {
               props.location.query.services.map((item, index) => <CardContainer><ContentContainer>
                 <span className="services">{item}</span>
 
-                <ServiceIcon src={"https://mark-teams.github.io/ChennaiServiceClub/"+props.location.query.serviceIcon[index]} alt={props.location.query.serviceIcon[index]}/>
+                <ServiceIcon src={props.location.query.serviceIcon[index]} alt={props.location.query.serviceIcon[index]}/>
                 <div className="container_cart">
-                  <span className="span">Minimun Cost: ₹. {props.location.query.amount[index]}</span>
+                  <span className="span">Minimun Cost: ₹{props.location.query.amount[index]}</span>
                   <span style={{"visibility":"hidden","position": "absolute"}} id={"total " + index} key={index} className="total_cart">{props.location.query.amount[index]}</span>
                   <Addbutton id={"addbutton " + index}  onClick={() => viewCount(index)}>+Add</Addbutton>
                   <div id={"count " + index} style={{ "visibility": "hidden", "align": "right","margin-right":"2vw" }}>

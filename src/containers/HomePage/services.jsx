@@ -92,11 +92,11 @@ export function Services(props) {
   let user = [{
     "id": 1,
     "title": "Services",
-    "thumbnailUrl": "AC_installation.jpg",
+    "thumbnailUrl": "AC_Repair_CSC.jpg",
     "rate": 4985,
     "rating": 4,
     "services": ["General Service", "Deep Cleaning Service", "Foam Wash Service"],
-    "serviceIcon":["service.png","deepclean.png","foam-wash.png"],
+    "serviceIcon":["AC_Repair_CSC.jpg","AC_Main_Services_CSC.jpg","AC_Service_CSC.jpg"],
     "price": ["499", "1399", "950"],
     "quantity":["0","0","0"],
     "specialist": {
@@ -106,11 +106,11 @@ export function Services(props) {
   }, {
     "id": 2,
     "title": "Repair",
-    "thumbnailUrl":"AC_Service.jpg",
+    "thumbnailUrl":"AC_Main_Services_CSC.jpg",
     "rate": 2500,
     "rating": 3,
     "services": ["Not Working", "Water Leakage", "Not Cooling", "Noise Problem"],
-    "serviceIcon":["repair.png","leaking.png","cooling.png","noise.png"],
+    "serviceIcon":["AC_Service_CSC.jpg","AC_Repair_CSC.jpg","AC_Gas_Filling_CSC.jpg","AC_Service_CSC.jpg"],
     "price": ["450", "450", "450", "450"],
     "quantity":["0","0","0","0"],
     "specialist": {
@@ -120,11 +120,11 @@ export function Services(props) {
   }, {
     "id": 3,
     "title": "Less/No Cooling",
-    "thumbnailUrl": "AC_Repair.jpg",
+    "thumbnailUrl": "AC_Install_CSC.jpg",
     "rate": 3295,
     "rating": 5,
     "services": ["Inspection Charges"],
-    "serviceIcon":["inspection.png"],
+    "serviceIcon":["AC_Gas_Filling_CSC.jpg"],
     "quantity":["0"],
     "price": ["249"],
     "specialist": {
@@ -134,11 +134,11 @@ export function Services(props) {
   }, {
     "id": 4,
     "title": "Install/Uninstall",
-    "thumbnailUrl": "AC_Gas_Filling.jpg",
+    "thumbnailUrl": "AC_Service_CSC.jpg",
     "rate": 4875,
     "rating": 5,
     "services": ["Split AC Installation", "Window AC Installation", "UnInstallation","Relocate"],
-    "serviceIcon":["split.png","window-ac.png","install.png","relocation.png"],
+    "serviceIcon":["AC_Install_CSC.jpg","AC_Service_CSC.jpg","AC_Main_Services_CSC.jpg","AC_Repair_CSC.jpg"],
     "price": ["1350", "849", "649","1999"],
     "quantity":["0","0","0","0"],
     "specialist": {
